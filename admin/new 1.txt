@@ -1,0 +1,364 @@
+<?php
+
+ob_start();
+session_start();
+include('database.php');
+$user=$_REQUEST['user'];
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bill</title>
+<style type="text/css" media="print">
+    @page 
+    {
+        size:  auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+
+    html
+    {
+        background-color: #FFFFFF; 
+        margin: 0px;  /* this affects the margin on the html before sending to printer */
+		
+    }
+
+    body
+    {
+       
+    }
+	</style>
+<style>
+body{font-family: 'Open Sans', sans-serif; font-size:12px;}
+table{ border-collapse:collapse; width:100%;}
+table tr,td,th{ border:1px solid #333; padding:6px;}
+div.table{margin:2% 2%;}
+.left-border{
+	border-left: 1px solid #000;}
+table.top tr:nth-child(1) p { margin-top: 0px !important;
+margin-bottom: 0px !important; text-align:left;}
+table.top tr:nth-child(2){ border-bottom:none;}
+table.top tr:nth-child(3){border-top:none; border-bottom:none;}
+table.top tr:nth-child(4){border-top:none;}
+table.top tr:nth-child(2) td{text-align:left;}
+table.top tr:nth-child(3) td{text-align:left;}
+table.top tr:nth-child(4) td{text-align:left;}
+label{
+	font-weight:bold;}
+.no{border:none;}
+table.no tr th{
+	border:none;}
+.heigh{
+	border-top:none;
+	text-align:center;
+	}
+	table.heigh tr:last-child td{ padding-bottom:1em;}
+	table.heigh tr,td{}
+	table.top{border:1px solid #333;}
+	table.top tr,td{ border:none;}
+	table.bottom td{ text-align:left; border:none;}
+	table.bottom tr:nth-child(1){ border-bottom:none;}
+	table.bottom tr:nth-child(2){ border-bottom:none; border-top:none;}
+	table.bottom tr:nth-child(3){ border-top:none;}
+	table.bottom tr:nth-child(4) td{ padding-top:5em; padding-bottom:2em;}
+	.text-center{ text-align:center !important;}
+	.text-right{ text-align:right !important;}
+.print{padding:7px 15px; margin:0 auto; background:rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #cae0b0 0%, #a6cb7a 2%, #6da42b 100%) repeat scroll 0 0; background:#619126; Color:#fff; }
+.no-print{ margin:2em 0;}
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+</style>
+<link href='//fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script>
+function calculate(){
+	
+	var no=document.getElementById('dis').value;
+		var price=document.getElementById('total').value;
+var total=parseFloat(price-no);
+document.getElementById('amt').value=total;
+}
+
+
+function save(){
+	//alert('ok');
+
+var dis = $("#dis").val();
+var price = $("#total").val();
+var billid = $("#billid").val();
+var bill_by = $("#billby").val();
+var paymode = $("#paymode").val();
+
+var total=parseFloat(price-dis);
+document.getElementById('amt').value=total;
+
+//alert(dis);
+
+var dataString = 'billid='+ billid + '&dis='+ dis + '&price='+ price+ '&total='+ total+'&bill_by='+ bill_by+'&paymode='+paymode;
+
+if(bill_by=='')
+{
+alert("Please Fill All Fields");
+}
+else{
+$.ajax({
+type: "POST",
+url: "save_bill.php",
+data: dataString,
+cache: false,
+success: function(data){
+	
+//alert(data);
+myFunction();
+
+ }
+});
+
+}
+}
+</script>
+</head>
+
+<body>
+<div class='privacy about' style='padding:0 1em 0em 1em;'>
+<div class="table">
+<table class="top">
+<tr>
+<td width="20%">
+<p><img src="images/karlsburg-logo.jpg" width="190" height="65"/></p>
+</td>
+<td width="30%">
+    <?php
+	$sq12="select * from billing_details where bill_id='".$user."'order by id desc limit 1";
+	$r12=mysqli_query($con,$sq12);
+$c1=mysqli_num_rows($r12);
+
+	while($row2=mysqli_fetch_array($r12)){
+	
+	$added_by=$row2['bill_by'];
+	
+	$pay=$row2['pay_mode'];
+
+}
+	?>
+<h2 class="text-center" style="margin:0px;">
+    
+    <select name="paymode" id="paymode">
+        <option value='CASH' <?php if($pay=='CASH' || $pay=='') echo " selected"?>>CASH</option>
+        <option value='CARD' <?php if($pay=='CARD') echo " selected"?>>CARD</option>
+                <option value='PAYTM' <?php if($pay=='PAYTM') echo " selected"?>>PAYTM</option>
+
+    </select>
+    
+  
+</h2>
+<h3 class="text-center" style="margin:0px;">RETAIL INVOICE</h3>
+</td><td width="50%" class="text-left">
+<h4  style="margin:0px;">J. K. Fashion Pvt. Ltd.</h4>
+<p>Security Hold Area,<?php echo $_SESSION['branch']; ?> Terminal,NSCB Airport</p>
+<p>Kolkata-700052 Ph: 033-25119559</p>
+<p>GSTIN: 19AABCJ3421G1ZU</p>
+<p class=""><b>Billed By: 
+
+<input type="text" class="" id="billby" name="bill_by"  value="<?php echo $added_by; ?>" required style="width:200px"/></b></p>
+</td></tr>
+</table>
+<style>
+table.new-table{
+	border:solid 1px #000;}
+table.new-table tr th{
+	border:solid 1px #000;}
+	table.new-table tr{
+	border:none;}
+	table.new-table tr td.no-left{
+		border-right:1px solid #000;
+		}
+table.old-table tr td{
+	border:solid 1px #000;
+	text-align:center;}
+		
+</style>
+<?php
+	$sq="select * from bill inner join billing_details on  bill.bill_id = billing_details.bill_id where bill.bill_id='".$user."'order by bill.id desc limit 1";
+	$r=mysqli_query($con,$sq);
+$c=mysqli_num_rows($r);
+
+	while($row=mysqli_fetch_array($r)){
+	
+	$name=$row['name'];
+	$phn=$row['phone1'];
+	$date=date('d-m-Y',strtotime($row['date']));
+
+		$em=$row['email'];
+}
+	?>
+<table width="100%" class="new-table">
+    <tr>
+    	<td width="17%"><label>Bill No:</label> <?php echo $user; ?></td>
+        <td width="23%"><label>Name:</label> <?php echo $name; ?></td>
+        <td width="26%"><label>Email:</label>  <?php echo $em; ?></td>
+        <td width="19%"><label>Phone:</label>  <?php echo $phn; ?></td>
+        <td width="15%"><label>Date:</label> 
+        <?php echo $date; ?></td>
+    </tr>
+</table>
+
+<div style="border:1px solid #000;">
+<table width="100%" class="old-table">
+<tr>
+<th width="5%">SL</th>
+<th width="35%">PRODUCT NAME / CODE</th>
+<th width="5%">QTY.</th>
+<th width="10%">RATE</th>
+<th width="10%">DISC.</th>
+<th width="10%">GROSS</th>
+<th width="10%">TAX</th>
+<th width="15%">NET AMOUNT</th>
+</tr>
+</table>
+</div>
+<div style="min-height:150px; border:1px solid #000;">
+<table border="1" class="old-table">
+<?php
+$quantity=0;
+$total=0;
+$sq1="select * from bill where bill_id='".$user."' order by id";
+	$r1=mysqli_query($con,$sq1);
+	$c=1;
+	while($row1=mysqli_fetch_array($r1)){ 
+	$quantity +=$row1['quantity'];
+	$total +=$row1['total'];
+		$discount=$row1['discount'];
+
+?>
+
+
+<tr>
+<td width="5%"><?php echo $c; ?></td>
+<td width="35%"><?php echo $row1['product_code']; ?></td>
+<td width="5%"><?php echo $row1['quantity']; ?></td>
+<td width="10%"><?php echo $row1['price']; ?></td>
+<td width="10%"></td>
+<td width="10%"></td>
+<td width="10%"></td>
+<td width="15%"><?php echo $row1['total']; ?></td>
+</tr>
+<?php
+	++$c;
+	}
+	define("MAJOR", 'pounds');
+    define("MINOR", 'p');
+    class toWords  {
+               var $pounds;
+               var $pence;
+               var $major;
+               var $minor;
+               var $words = '';
+               var $number;
+               var $magind;
+               var $units = array('','One','Two','Three','Four','Five','Six','Seven','Eight','Nine');
+               var $teens = array('Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen');
+               var $tens = array('','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety');
+               var $mag = array('','Thousand','Million','Billion','Trillion');
+        function toWords($amount, $major=MAJOR, $minor=MINOR) {
+                 $this->major = $major;
+                 $this->minor = $minor;
+                 $this->number = number_format($amount,2);
+                 list($this->pounds,$this->pence) = explode('.',$this->number);
+                 $this->words = " $this->major $this->pence$this->minor";
+                 if ($this->pounds==0)
+                     $this->words = "Zero $this->words";
+                 else {
+                     $groups = explode(',',$this->pounds);
+                     $groups = array_reverse($groups);
+                     for ($this->magind=0; $this->magind<count($groups); $this->magind++) {
+                          if (($this->magind==1)&&(strpos($this->words,'hundred') === false)&&($groups[0]!='000'))
+                               $this->words = ' and ' . $this->words;
+                          $this->words = $this->_build($groups[$this->magind]).$this->words;
+                     }
+                 }
+        }
+        function _build($n) {
+                 $res = '';
+                 $na = str_pad("$n",3,"0",STR_PAD_LEFT);
+                 if ($na == '000') return '';
+                 if ($na{0} != 0)
+                     $res = ' '.$this->units[$na{0}] . ' hundred';
+                 if (($na{1}=='0')&&($na{2}=='0'))
+                      return $res . ' ' . $this->mag[$this->magind];
+                 $res .= $res==''? '' : ' and';
+                 $t = (int)$na{1}; $u = (int)$na{2};
+                 switch ($t) {
+                         case 0: $res .= ' ' . $this->units[$u]; break;
+                         case 1: $res .= ' ' . $this->teens[$u]; break;
+                         default:$res .= ' ' . $this->tens[$t] . ' ' . $this->units[$u] ; break;
+                 }
+                 $res .= ' ' . $this->mag[$this->magind];
+                 return $res;
+        }
+    }
+    $amount = $total;
+        $obj = new toWords( $total , 'Only', ' paisa');
+   
+	?>
+</table>
+</div>
+<table class="old-table">
+<tr>
+<td width="5%"></td>
+<td width="35%">Total <i>(Incl. of all Taxes)</i></td>
+<td width="5%"><?php echo $quantity ?></td>
+<td></td>
+<td width="15%"><?php echo $total ?></td>
+</tr>
+<tr>
+  <td width="5%"></td>
+  <td width="35%">Discount</i></td>
+  <td width=""></td>
+  <td width=""></td>
+
+   <td colspan="" style="text-align:center;">
+    <input type="hidden" id="billid" name="pcode" value="<?php echo $user ?>"/>
+    <input type="hidden" id="total" name="tot" value="<?php echo $total ?>"/>
+   <input type="text" id="dis" name="dis" value="<?php echo $discount; ?>" onkeyup="calculate()" style="text-align:center;" /></td>
+</tr>
+<tr>
+<td width="5%"></td>
+<td width="35%">Total Amount</td>
+<td width="5%"></td>
+<td></td>
+<td width="15%" style="text-align:center;"><input type="text" id="amt"  name="amt" value="<?php echo $total-$discount ?>" style="text-align:center;"></td>
+</tr>
+</table>
+<div style="min-height:30px; border:1px solid #000;">
+<span style="float:right;">
+For <b>J.K. Fashion Pvt. Ltd.</b>
+</span>
+<div class="text-center" >
+	<span><b>Now Shop Online at www.karlsburg.in</b></span>
+</div>
+</div>
+
+<div class="no-print" align="center">
+<!--button onclick="myFunction()" class="print">Print this page</button-->
+<button  name="sub" onclick="return save();" class="print" id="mm">Print this page</button>
+<div>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+</div>
+</body>
+</html>

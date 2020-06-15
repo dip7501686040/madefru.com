@@ -1,0 +1,34 @@
+/**
+ * Sliding swipe menu CSS
+ */
+ /* mobile sidebar*/
+nav {
+    position: fixed;top: 0;bottom: 0; height: 100vh; width: 250px;overflow-y: scroll;overflow-x: visible;
+    transform: translate(-250px,0);background-color: rgb(72, 97, 97); z-index: 99;
+}
+.ssm-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 99;
+}
+.ssm-toggle-nav{position: absolute;top: 10px; left: 12px;display: none;}
+.ssm-toggle-nav div{background: #05d70a; margin-bottom: 2px;height: 2px; width: 14px;}
+.ssm-toggle-nav div:last-child{margin-bottom: 0;}
+@media only screen and (min-width:320px) and (max-width: 480px){
+    nav{display: block;}
+    .ssm-toggle-nav{display: block;}
+    .ssm-overlay{display: none;}
+    .is-navOpen{overflow: hidden;}
+    nav .category{margin: 10px 0;}
+    nav .mobile-product-category{ color: rgb(233, 240, 235);font-size: 13px; margin: 5px 0 0 20px;padding: 0;
+    box-shadow: 0 0 3px rgb(190, 187, 187);}
+    nav .subsubcategory{float: left;}
+    nav .mobile-product-subcategory{color: rgb(233, 240, 235);font-size: 11px; margin: 0 0 0 30px;padding: 0;}
+    nav .mobile-product-subsubcategory{color: rgb(233, 240, 235);font-size: 6px; margin: 0 0 0 30px;padding: 0;}
+}
+/* //mobile sidebar*/

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+  <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+    <script src="plugins/jQuery/jquery-1.11.1.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+ <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+</head>
+
+<body>
+<div class="bootstrap-timepicker">
+                    <div class="form-group">
+                      <label>Time picker:</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control timepicker">
+                        <div class="input-group-addon">
+                          <i class="fa fa-clock-o"></i>
+                        </div>
+                      </div><!-- /.input group -->
+                    </div><!-- /.form group -->
+                  </div>
+<script>
+$(function () {
+	//Timepicker
+        $(".timepicker").timepicker({
+          showInputs: false
+        });
+      });
+    </script>
+</body>
+</html>
