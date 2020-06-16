@@ -73,6 +73,7 @@
 	    $('#product-list').DataTable();
     });
 </script>
+<!-- header -->
     <header>
         <div class="container-fluid">
             <a href="index.php" id="logo"><img src="../images/madefru sell logo2.jpg" alt=""></a>
