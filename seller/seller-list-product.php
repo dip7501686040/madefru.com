@@ -140,9 +140,9 @@
 </div>
 <?php
     if(isset($_POST['submit'])){
-        include('product_id.php');
-        $query="insert into `seller_product` (`id`, `seller_id`, `product_id`, `product_name`, `category`, `subcategory`, `subsubcategory`, 
-        `price`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$id', '$_POST[product_name]', '$_POST[new_category]', 
+        include('seller_product_id.php');
+        $query="insert into `seller_product` (`id`, `seller_id`, `seller_product_id`, `product_name`, `category`, `subcategory`, `subsubcategory`, 
+        `price`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$seller_product_id', '$_POST[product_name]', '$_POST[new_category]', 
         '$_POST[new_subcategory]', '$_POST[new_subsubcategory]', '$_POST[product_price]', 'not-approved', '$row1[id]',CURDATE(),CURTIME())";
         if($result=$db_handle->runQuery($query)){
             echo"<script>alert('product listed successfully')</script>";

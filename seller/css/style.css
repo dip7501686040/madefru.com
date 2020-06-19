@@ -83,3 +83,46 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     .list-product-footer{position: relative;top: 200px;}
     .user-account-footer{margin-top: 250px;}
 /* //footer */
+
+/* responsive */
+
+@media only screen and (min-width:320px) and (max-width: 480px){
+
+    /* header */
+    #logo img{height: 27px; width: 42px; margin: 10px;}
+    header .container-fluid{padding: 0;}
+    #sellerlogin{position: relative; left: -100px; font-size: 7px; font-weight: 200; margin-top: 13px;}
+    #sellerlogin-modal{height: auto; width: 243px; margin-top: 70px;}
+    #sellerlogin-modal input[type="text"],
+    #sellerlogin-modal input[type="password"]{font-size: 10px; margin: 0 0 5px 0; width: 100%;}
+    #sellerlogin-modal input[type="submit"]{font-size: 12px;}
+    #sellerlogin-modal .modal-body p{font-size: 8px; padding-left: 10px;}
+    /* //header */
+
+    /* navbar */
+    #navbar{height: 25px; text-align: unset; padding-left: 40px;}
+    #navbar ul li{margin-right: 10px;}
+    #navbar ul li a{color: white; font-size: 10px;}
+    /* //navbar */
+
+    /* open shop */
+    #open-shop{position: relative;top: 70px !important; height: 200px;}
+    #open-shop img{width: 33%;height: 120px;margin: 10px 5px;}
+    #open-shop .text{position: absolute;top: 10px;left: 140px;text-shadow: 0 0 5px rgb(46, 45, 45);}
+    #open-shop .text h3{font-size: 12px;}
+    #open-shop .text h4{font-size: 10px;}
+    #open-shop .text h5{font-size: 7px;}
+    #open-shop .register{position: absolute;top: 10px;right: 10px; width: 27%;padding: 5px 0;}
+    #open-shop .register input[type="text"],
+    #open-shop .register input[type="email"],
+    #open-shop .register input[type="password"]{width: 90%;margin: 0 3px 7px 3px;padding-left: 5px; height: 15px;font-weight: 300;font-size: 7px;}
+    #open-shop .register input[type="submit"]{width: 70px;margin: 10px 0 0 16px; font-size: 10px;font-weight: 400;}
+    #same-pass{position: absolute;top: 290px; font-size: 12px; color: red; padding-left: 15px; display: none;}
+    #query-erorr{position: absolute;top: 2px; font-size: 12px; color: red; padding-left: 15px; display: none;}
+    #phone-exist{position: absolute;top: 146px; font-size: 12px; color: red; padding-left: 15px; display: none;}
+    #email-exist{position: absolute;top: 192px; font-size: 12px; color: red; padding-left: 15px; display: none;}
+/* //open shop */
+
+}
+
+/* //responsive */
