@@ -107,7 +107,7 @@
         </ul>
         </form>
     </div>
-    <div class="list-product">
+    <div class="list-product mobile-product">
         <div id="list-content">
             <h3>Listing product needs to be aproove by us.
                 After that your product will be listed in your shop.

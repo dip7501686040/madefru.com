@@ -122,7 +122,32 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     #phone-exist{position: absolute;top: 146px; font-size: 12px; color: red; padding-left: 15px; display: none;}
     #email-exist{position: absolute;top: 192px; font-size: 12px; color: red; padding-left: 15px; display: none;}
 /* //open shop */
-
+    /* dashboard */
+    #dashboard{position: relative;top: 80px;height: 650px;width: 90%;margin: 0 15px;}
+    #dashboard ul{position: relative;top: 30px;left: 0;}   
+    #dashboard ul li{display: block;margin: 0 0 20px 105px;}
+    /* //dashboard */
+    /* list product */
+    #list-product-container{position: relative;top: 80px;margin: 0 10px;}
+    .list-product{margin-top: 270px;}
+    .list-product .list-col{float: left; margin: 20px 20px 0 20px;}
+    .mobile-product{margin-top: -20px;}
+    #list-content{padding: 20px 10px; margin-left: -150px;}
+    #list-content h3{font-size: 15px;}
+    #submit-button{padding: 30px 0 20px 20px;}
+    #pickupaddress{margin-left: 20px;}
+    #list-content h4{margin: 20px 0 20px 20px; font-size: 15px;}
+    .delivery-address{display: none;}
+    .mobile-delivery-address{display: block; position: relative; top: 20px;}
+    .mobile-delivery-address .default{padding-left: 120px;}
+    .mobile-delivery-address #setdefault{height: 25px;width: 25px;}
+    .mobile-delivery-address input{border-top: 1px solid grey;margin: 10px;width: 200px;}
+    .mobile-delivery-address textarea{width: 320px;}
+    .mobile-delivery-address input[type='submit']{width: 80px;}
+    /* //list product */
+    /* all product */
+        #product-list-container{position: relative; top: 80px; padding: 10px;}
+    /* //all product */
 }
 
 /* //responsive */
