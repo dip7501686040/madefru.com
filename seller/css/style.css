@@ -91,7 +91,7 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     /* header */
     #logo img{height: 27px; width: 42px; margin: 10px;}
     header .container-fluid{padding: 0;}
-    #sellerlogin{position: relative; left: -100px; font-size: 7px; font-weight: 200; margin-top: 13px;}
+    #sellerlogin{position: relative; left: 100px; font-size: 7px; font-weight: 200; margin-top: 13px;}
     #sellerlogin-modal{height: auto; width: 243px; margin-top: 70px;}
     #sellerlogin-modal input[type="text"],
     #sellerlogin-modal input[type="password"]{font-size: 10px; margin: 0 0 5px 0; width: 100%;}
