@@ -1,19 +1,22 @@
 <?php
     include('header.php');
+    $query="select * from seller where seller_id='$_REQUEST[seller_id]'";
+    $result=$db_handle->runQuery($query);
+    $seller=$result->fetch_assoc();
 ?>
 <div class="seller-shop">
     <div class="shop">
-        <div class="heading">
-            <span>SELLER NAME -</span>
-            <a href="">view all</a>
-        </div>
-        <div id="new-item" class="owl-carousel">
+    <div class="heading">
+        <span>SELLER NAME - <?php echo $seller['name'] ?></span>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
             <?php
-                $query="select * from product where new_item=1 order by product_id desc";
+                $query="select * from product where seller_id='$seller[seller_id]' order by product_id desc";
                 $result=$db_handle->runQuery($query);
                 while($row=$result->fetch_assoc()){
             ?>
-            <div class="item">
+            <div class="col pb-5">
                 <div class="card">
                     <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
                     <?php
@@ -40,11 +43,13 @@
                         <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
                         </p>
                     </div>
-                </div>
+                </div>    
             </div>
-            <?php } ?>
-            <div class="clearfix"></div>
+            <?php
+                }
+            ?>
         </div>
+    </div>
     </div>
 </div>    
 <div class="seller-shop-footer">

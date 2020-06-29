@@ -4042,3 +4042,7 @@ h4.title3 {
 /* //all category */
 /* all product */
 /* //all product */
+/* seller-products */
+#seller-product-img{height: 40px; width: 40px;}
+#approve-product{box-shadow: 0 0 10px rgb(126, 124, 124); padding-bottom: 20px;}
+/* //seller-products */

@@ -1,121 +1,173 @@
 <?php
     include('header.php');
 ?>
-<div id="product-list-container">
-
-        <tr class="tfilter">
-                <td class="filtertype">
-                    <a href="new_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        New
-                    </a>
-                </td>
-                <td class="filtertype">
-                    <a href="popular_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        Popular
-                    </a>
-                </td>
-                <td class="filtertype">
-                    <a href="hit_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        Hit
-                    </a>
-                </td>
-                <td class="filtertype">
-                    <a href="low_stock_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        Low stock
-                    </a>
-                </td>
-                
-                <td class="filtertype">
-                    <a href="offer_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        sunday offer
-                    </a>
-                </td>
-                <td class="filtertype">
-                    <a href="refresh_product.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
-                        Refresh
-                    </a>
-                </td>
-            <tr>   
-        <table id="product-list" class="display" style="width:90%;">
-            <thead>
-                <tr>
-                    <th>Sl</th>
-                    <th>Name</th>
-                    <th>Brand</th>
-                    <th>Category</th>
-                    <th>Sub category</th>
-                    <th>Sub Sub category</th>
-                    <th>Descrip</th>
-                    <th>Size</th>
-                    <th>Color</th>
-                    <th>Price</th>
-                    <th>Discount</th>
-                    <th>Net price</th>
-                    <th>Quantity</th>
-                    <th>Edit / Delete</th>
-                </tr>
-            </thead>
-            <tbody>
+<div class="container-fluid pt-3 pb-3" id="seller_all_product">
+    <table id="product-list" class="table table-borderless class">
+        <thead>
+            <tr>
+                <th>slno.</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Sub category</th>
+                <th>Sub Sub category</th>
+                <th>Status</th>
+                <th>Pickup address</th>
+                <th>Images</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <?php
+                $i=0;
+                $query="select * from seller_product where seller_id='$_SESSION[seller_id]'";
+                $result=$db_handle->runQuery($query);
+                while($product=$result->fetch_assoc()){
+                    $i++;
+            ?>
+            <tr>
+                <td><?php echo"$i"; ?></td>
+                <td><?php echo"$product[seller_product_id]"; ?></td>
+                <td><?php echo"$product[product_name]"; ?></td>
+                <td><?php echo"$product[price]"; ?></td>
+                <td><?php echo"$product[category]"; ?></td>
+                <td><?php echo"$product[subcategory]"; ?></td>
+                <td><?php echo"$product[subsubcategory]"; ?></td>
+                <td><?php echo"$product[status]"; ?></td>
                 <?php
-                    $sl=0; 
-                    $query1="select * from product";
-                    $r1=$db_handle->runQuery($query1);
-                    while($prow=mysqli_fetch_assoc($r1)){
-                        $sl++;
-                        $pid=$prow['product_id'];
-                        $pname=$prow['product_name'];
-                        $pbrand=$prow['brand'];
-                        $pcategory=$prow['category'];
-                        $psubcate=$prow['subcategory'];
-                        $psubsubcate=$prow['subsubcategory'];
-                        $pdescrip=$prow['description'];
-                        $psize=$prow['size'];
-                        $pcolor=$prow['color'];
-                        $pprice=$prow['price'];
-                        $pdiscount=$prow['discount'];
-                        $pnet=$prow['net_price'];
-                        $pquantity=$prow['quantity'];
+                    $query1="select * from pickup_address where id='$product[pickup_address_id]'";
+                    $result1=$db_handle->runQuery($query1);
+                    $row1=$result1->fetch_assoc();
                 ?>
-                <tr>
-                    <td><?php echo"$sl"; ?></td>
-                    <td><?php echo"$pname"; ?></td>
-                    <td><?php echo"$pbrand"; ?></td>
-                    <td><?php echo"$pcategory"; ?></td>
-                    <td><?php echo"$psubcate"; ?></td>
-                    <td><?php echo"$psubsubcate"; ?></td>
-                    <td><?php echo"$pdescrip"; ?></td>
-                    <td><?php echo"$psize"; ?></td>
-                    <td><?php echo"$pcolor"; ?></td>
-                    <td><?php echo"$pprice"; ?></td>
-                    <td><?php echo"$pdiscount"; ?>%</td>
-                    <td><?php echo"$pnet"; ?></td>
-                    <td><?php echo"$pquantity"; ?></td>
-                    <td><?php echo"<a href='edit_product_aesir.php?id=$pid' class='btn btn-primary btn-sm' style='padding: 2px; margin: 2px;'>
-                                Edit</a><a href='delete_product.php?id=$pid' class='btn btn-primary btn-sm' style='padding: 2px; margin: 2px;' onclick='return send();'>
-                                Delete</a>"; ?></td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                <td>
+                    <?php echo"$row1[address]"; ?>,<br><?php echo"$row1[locality]"; ?>,<?php echo"$row1[city]"; ?>,<br><?php echo"$row1[state]"; ?>-<?php echo"$row1[pin]"; ?></p>
+                </td>
+                <?php
+                    $query1="select product_id,status from seller_product where seller_product_id='$product[seller_product_id]'";
+                    $result1=$db_handle->runQuery($query1);
+                    $seller_product=$result1->fetch_assoc();
+                    $query2="select * from seller_product_img where seller_product_id='$product[seller_product_id]'";
+                    $query3="select * from product_img where product_id='$seller_product[product_id]'";
+                    if($seller_product['status']=='approved'){
+                        $result2=$db_handle->runQuery($query3);
+                    }
+                    else{
+                        $result2=$db_handle->runQuery($query2);
+                    }
+                ?>
+                <td>
+                    <div class="row">
+                        <?php
+                            while($row2=$result2->fetch_assoc()){
+                        ?>
+                        <div class="col-6 pb-2">
+                            <img src="../images/<?php echo $row2['img']; ?>" alt="">
+                        </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                </td>
+            </tr>
+            <?php
+                }
+            ?>
+        </tbody>    
+    </table>
 </div>
-<div class="list-product-footer">
+<?php
+    $i=0;
+    $query="select * from seller_product where seller_id='$_SESSION[seller_id]'";
+    $result=$db_handle->runQuery($query);
+    while($product=$result->fetch_assoc()){
+        $i++;
+?>
+<div id="mobile-all-products">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <span>SL no.- <?php echo"$i"; ?></span>
+        </div>
+        <div class="col">
+            <span><b>Product ID - </b><?php echo"$product[seller_product_id]"; ?></span>
+        </div>
+    </div>
+    <div class="row justify-content-center pl-1 pt-3">
+        <div class="col-5">
+            <span><b>Product Name</b>
+            <div><?php echo"$product[product_name]"; ?></div></span>
+        </div>
+         <div class="col-3">
+            <b>Price</b>
+            <div><?php echo"$product[price]"; ?></div>
+        </div>
+        <div class="col-4">
+            <b>Status</b>
+            <div><?php echo"$product[status]"; ?></div>
+        </div>
+    </div>
+    <div class="row justify-content-center pl-1 pt-3">
+        <div class="col-4">
+            <span>
+            <b>Category</b>
+            <div><?php echo"$product[category]"; ?></div>
+            </span>
+        </div>
+        <div class="col-4">
+            <span>
+                <b>Sub Category</b>
+                <div><?php echo"$product[subcategory]"; ?></div>
+            </span>
+        </div>
+         <div class="col-4">
+            <span>
+                <b>Sub Sub Category</b>
+                <div><?php echo"$product[subsubcategory]"; ?></div>
+            </span>
+        </div>
+    </div>
+    <div class="row justify-content-center pl-2 pt-3">
+        <div class="col-6">
+            <span>
+            <b>Pickup Address</b>
+            <div><?php echo"$row1[address]"; ?>,<br><?php echo"$row1[locality]"; ?>,<?php echo"$row1[city]"; ?>,<br><?php echo"$row1[state]"; ?>-<?php echo"$row1[pin]"; ?></p></div>
+            </span>
+        </div>
+        <div class="col-6">
+            <span>
+                <b>Images</b>
+                <?php
+                    $query1="select product_id,status from seller_product where seller_product_id='$product[seller_product_id]'";
+                    $result1=$db_handle->runQuery($query1);
+                    $seller_product=$result1->fetch_assoc();
+                    $query2="select * from seller_product_img where seller_product_id='$product[seller_product_id]'";
+                    $query3="select * from product_img where product_id='$seller_product[product_id]'";
+                    if($seller_product['status']=='approved'){
+                        $result2=$db_handle->runQuery($query3);
+                    }
+                    else{
+                        $result2=$db_handle->runQuery($query2);
+                    }
+                ?>
+                <div class="row">
+                    <?php
+                        while($row2=$result2->fetch_assoc()){
+                    ?>
+                    <div class="col-6 pb-1">
+                        <img src="../images/<?php echo $row2['img']; ?>" alt="">
+                    </div>
+                    <?php
+                        }
+                    ?>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+<?php
+    }
+?>
+<div class="allproduct-footer">
 <?php
     include('footer.php');
 ?>
 </div>
-<?php
-    if(isset($_POST['submit'])){
-        include('product_id.php');
-        $query="insert into `seller_product` (`id`, `seller_id`, `product_id`, `product_name`, `category`, `subcategory`, `subsubcategory`, 
-        `price`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$id', '$_POST[product_name]', '$_POST[new_category]', 
-        '$_POST[new_subcategory]', '$_POST[new_subsubcategory]', '$_POST[product_price]', 'not-approved', '$row1[id]',CURDATE(),CURTIME())";
-        if($result=$db_handle->runQuery($query)){
-            echo"<script>alert('product listed successfully')</script>";
-            echo"<script>window.location.href='seller-list-product.php'</script>";
-        }
-        else{
-            echo"<script>alert('sorry failed')</script>";
-            echo"<script>window.location.href='seller-list-product.php'</script>";
-        }
-    }
-?>

@@ -35,7 +35,7 @@ $result = mysqli_query($con,"select * from product_img where id=".$code."");
    <label class="control-label col-sm-2"> Image</label>  
 	<div class="col-sm-10">
 
-<img src="../product_img/<?php echo $img; ?>" width="200">
+<img src="../images/<?php echo $img; ?>" width="200">
  </div>
 	   </div>
 	  

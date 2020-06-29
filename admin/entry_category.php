@@ -39,7 +39,12 @@ function check1(){
 <div class="form-group">
 					<label>Product Category</label>
 					
-					<input type="text" class="form-control" placeholder="Product Category" name="cate" size="30" required> 
+					<input type="text" class="form-control" placeholder="Product Category" name="cate" size="30" required
+					<?php
+						if(!empty($_REQUEST['category'])){
+							echo "value='$_REQUEST[category]'";
+						}
+					?>> 
 </div>
 
 					</div>

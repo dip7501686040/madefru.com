@@ -103,28 +103,15 @@ else
 								
 								
 								<li>
-									<a href="banner.php">Add Banner</a>
+									<a href="all-seller.php">All seller</a>
 								</li>
 								<li>
-									<a href="all_banner.php">All Banner</a>
+									<a href="not-approved-product.php">Not Approved Product</a>
 								</li>
 								<li>
-									<a href="logo.php">Add Logo</a>
+									<a href="approved-product.php">Approved Product</a>
 								</li>
-								<li>
-									<a href="all_logo.php">All Logo</a>
-								</li>
-								
-								
-						 
-								
-								<li>
-									<a href="all_about.php">Edit About Page</a>
-								</li>
-								
-							  
-								
-								
+
 								</ul>
 						</li>
 	

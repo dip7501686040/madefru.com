@@ -55,7 +55,12 @@ function check1(){
 
 					<label>Product Sub Category</label>
 					
-					<input type="text" class="form-control" placeholder="Product sub Category" name="sub_cate" size="30" required> 
+					<input type="text" class="form-control" placeholder="Product sub Category" name="sub_cate" size="30" required
+					<?php
+						if(!empty($_REQUEST['subcategory'])){
+							echo "value='$_REQUEST[subcategory]'";
+						}
+					?>>  
 				
 					</div>
 	
@@ -79,8 +84,8 @@ function check1(){
                 </div>
 				
 <?php
-
 if(isset($_POST['sub'])){
+if(isset($_POST['category']) && $_POST['category']!='select'){
 	$category=$_POST['category'];
 	$subcategory=$_POST['sub_cate'];
 	$query="insert into subcategory(category,subcategory) values('$category','$subcategory')";
@@ -92,7 +97,10 @@ if(isset($_POST['sub'])){
 		echo "<script>sweetAlert('query error');</script>";	
 	}
 }
-
+else{
+	echo "<script>sweetAlert('Select a category');</script>";	
+}
+}
 ?>				
 </div>
 </div>		

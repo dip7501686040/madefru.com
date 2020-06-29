@@ -55,6 +55,7 @@ include('database.php');
 	  $('#example').DataTable();
   
  });
+
  
   </script>
 <!-- Metis Menu -->

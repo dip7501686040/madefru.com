@@ -174,7 +174,7 @@ $.each(return_data.data, function(key,value){
         $tmpimage=$_FILES['pimage']['tmp_name'];
         $netprice=$_POST['pnetprice'];
         $disvalue=$price-$netprice;
-        $discount=(100*($disvalue/$price));
+        $discount=round((100*($disvalue/$price)));
         $size=$_POST['psize'];
         $color=$_POST['pcolor'];
         $descrip=$_POST['pdescription'];

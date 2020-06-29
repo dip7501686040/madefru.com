@@ -40,6 +40,7 @@ include('header.php');
                         Low stock
                     </a>
                 </td>
+                
                 <td class="filtertype">
                     <a href="offer_filter.php" class="btn btn-primary btn-sm" style="padding: 1px 10px; margin: 0px 10px 10px 10px;">
                         sunday offer
@@ -55,14 +56,9 @@ include('header.php');
             <thead>
                 <tr>
                     <th>Sl</th>
+                    <th>Product ID</th>
                     <th>Name</th>
-                    <th>Brand</th>
                     <th>Category</th>
-                    <th>Sub category</th>
-                    <th>Sub Sub category</th>
-                    <th>Descrip</th>
-                    <th>Size</th>
-                    <th>Color</th>
                     <th>Price</th>
                     <th>Discount</th>
                     <th>Net price</th>
@@ -79,13 +75,7 @@ include('header.php');
                         $sl++;
                         $pid=$prow['product_id'];
                         $pname=$prow['product_name'];
-                        $pbrand=$prow['brand'];
                         $pcategory=$prow['category'];
-                        $psubcate=$prow['subcategory'];
-                        $psubsubcate=$prow['subsubcategory'];
-                        $pdescrip=$prow['description'];
-                        $psize=$prow['size'];
-                        $pcolor=$prow['color'];
                         $pprice=$prow['price'];
                         $pdiscount=$prow['discount'];
                         $pnet=$prow['net_price'];
@@ -93,14 +83,9 @@ include('header.php');
                 ?>
                 <tr>
                     <td><?php echo"$sl"; ?></td>
+                    <td><?php echo"$pid"; ?></td>
                     <td><?php echo"$pname"; ?></td>
-                    <td><?php echo"$pbrand"; ?></td>
                     <td><?php echo"$pcategory"; ?></td>
-                    <td><?php echo"$psubcate"; ?></td>
-                    <td><?php echo"$psubsubcate"; ?></td>
-                    <td><?php echo"$pdescrip"; ?></td>
-                    <td><?php echo"$psize"; ?></td>
-                    <td><?php echo"$pcolor"; ?></td>
                     <td><?php echo"$pprice"; ?></td>
                     <td><?php echo"$pdiscount"; ?>%</td>
                     <td><?php echo"$pnet"; ?></td>

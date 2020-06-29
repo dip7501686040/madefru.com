@@ -14,7 +14,7 @@ else
 {
 $img1=$_FILES['file']['name'];
 
-if(move_uploaded_file($_FILES['file']['tmp_name'],"../product_img/".$img1))
+if(move_uploaded_file($_FILES['file']['tmp_name'],"../images/".$img1))
 {
 	
 $sq="update product_img set img='".$img1."' where id='".$id."'";

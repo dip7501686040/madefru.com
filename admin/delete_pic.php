@@ -10,7 +10,7 @@ $sq="delete from product_img where id='".$id."' ";
 $r1=mysqli_query($con,$sq1);
 while($row=mysqli_fetch_assoc($r1)){
 	$img=$row['img'];
-	unlink("../product_img/$img");
+	unlink("../images/$img");
 }
 $r=mysqli_query($con,$sq);
 

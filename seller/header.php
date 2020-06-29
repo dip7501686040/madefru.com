@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell on Madefru</title>
     <!-- css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.2" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -68,8 +68,6 @@
                 }
             });
         });
-    });
-    $(document).ready(function(){
 	    $('#product-list').DataTable();
     });
 </script>
@@ -80,14 +78,30 @@
             <?php
                 if(isset($_SESSION['seller_id'])){
                     ?>
-                    <button id="sellerlogin" class="btn" type="button">
+                    <button id="sellerlogin" class="btn" type="button" data-toggle="modal" data-target="#sellerlogout-modal">
                         <?php
-                            $query="select fname from seller where seller_id='$_SESSION[seller_id]'";
+                            $query="select seller_id from seller where seller_id='$_SESSION[seller_id]'";
                             $result=$db_handle->runQuery($query);
                             $data=$result->fetch_assoc(); 
-                            echo "Seller: $data[fname]";
+                            echo "Seller ID- $data[seller_id]";
                         ?>
                     </button>
+                    <div class="modal fade" id="sellerlogout-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Log Out</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body pl-5">
+                                    <h3>Thank You</h3>
+                                    <a id="logout" href="logout.php" class="btn">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php
                 }
                 else{
@@ -159,7 +173,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="../seller-shop.php"><i class="fas fa-store"></i>&nbspYour Shop</a>
+                    <a href="../seller-shop.php?seller_id=<?php echo $_SESSION['seller_id']; ?>"><i class="fas fa-store"></i>&nbspYour Shop</a>
                 </li>
             </ul>
         </div>

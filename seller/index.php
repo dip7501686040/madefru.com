@@ -39,9 +39,16 @@ include('header.php');
         ?>
         <script>
             $(document).ready(function(){
+                if (window.matchMedia('(min-width:320px) and (max-width: 480px)').matches) {
                 $("#open-shop").css("top","80px");
                 $("#seller-content").css("top","80px");
                 $(".index-footer").css("top","130px");
+            }
+            else{
+                $("#open-shop").css("top","80px");
+                $("#seller-content").css("top","80px");
+                $(".index-footer").css("top","130px");
+            }
             });
         </script>
         <?php
@@ -65,7 +72,7 @@ include('header.php');
             oninvalid="this.setCustomValidity('Enter only your 10 digit phone no.')" oninput="this.setCustomValidity('')" maxlength="10" required>
             <p id="phone-exist">Phone number already exist please Login</p>
             <input id="email" type="email" placeholder="EMAIL" required>
-            <p id="email-exist">Email already exist please Login or try with another email</p>
+            <p id="email-exist">Email already exist please Login</p>
             <input id="pass" type="password" placeholder="PASSWORD" minlength="8" 
             oninvalid="this.setCustomValidity('Enter minimum 8 character')" oninput="this.setCustomValidity('')" required>
             <input id="rpass" type="password" placeholder="RETYPE PASSWORD" minlength="8" 

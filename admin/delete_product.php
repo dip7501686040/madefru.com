@@ -26,10 +26,12 @@ ob_start();
 					while($row=mysqli_fetch_array($r)){
 					    
 			$img=$row['img'];
-			unlink("../product_img/$img");
+			unlink("../images/$img");
 					}
 					$sq1="delete from product_img where product_id='".$_REQUEST['id']."'";
 			mysqli_query($con,$sq1);
+			$sq3="delete from seller_product where product_id='".$_REQUEST['id']."'";
+			mysqli_query($con,$sq3);
 			
 			
 header("location:all_product.php");

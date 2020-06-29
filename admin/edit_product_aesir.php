@@ -233,7 +233,7 @@ $offer=$row['sunday_offer'];
 			echo "	<tr>
 				<td>$count</td>
 
-				<td><img src='../product_img/".$row['img']."' width='100' height='70' alt='".$row['img']."'></td>
+				<td><img src='../images/".$row['img']."' width='100' height='70' alt='".$row['img']."'></td>
 				<td><a href='edit_pic.php?id=$id&url=".$_SERVER['REQUEST_URI']."' class='label label-success' rel='facebox'>Edit</a>
 
 					<a href='delete_pic.php?id=$id&url=".$_SERVER['REQUEST_URI']."' class='label label-danger' onclick='return send();'>Delete</a>

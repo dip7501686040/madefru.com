@@ -89,7 +89,12 @@ $.each(return_data.data, function(key,value){
 
 					<label>*Product Sub Sub Category</label>
 					
-					<input type="text" class="form-control" placeholder="sub sub Category" name="subsubcate" size="35" required> 
+					<input type="text" class="form-control" placeholder="sub sub Category" name="subsubcate" size="35" required
+					<?php
+						if(!empty($_REQUEST['subsubcategory'])){
+							echo "value='$_REQUEST[subsubcategory]'";
+						}
+					?>>   
 				
 					</div>
 	
@@ -112,8 +117,8 @@ $.each(return_data.data, function(key,value){
                 </div>
 				
 <?php
-
 if(isset($_POST['sub'])){
+if(isset($_POST['category']) && $_POST['category']!='select' && isset($_POST['subcategory']) && $_POST['subcategory']!='select'){
 	$category=$_POST['category'];
 	$subcategory=$_POST['subcategory'];
     $subsubcate=$_POST['subsubcate'];
@@ -125,6 +130,10 @@ if(isset($_POST['sub'])){
 				
 		echo "<script>sweetAlert('query error');</script>";	
 	}
+}
+else{
+	echo "<script>sweetAlert('select category and sub category');</script>";
+}
 }
 
 ?>				

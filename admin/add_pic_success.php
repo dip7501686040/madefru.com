@@ -13,7 +13,7 @@ else
 {
 $img1=$_FILES['pimage']['name'];
 
-if(move_uploaded_file($_FILES['pimage']['tmp_name'],"../product_img/".$img1))
+if(move_uploaded_file($_FILES['pimage']['tmp_name'],"../images/".$img1))
 {
 	
 $query="insert into `product_img` (`id`, `product_id`, `img`) values (NULL, '$id', '$img1')";

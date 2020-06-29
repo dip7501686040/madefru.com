@@ -361,13 +361,13 @@ color: rgb(65, 64, 66);padding: 2px 100px;font-size: 22px;font-weight: 700;margi
 -moz-box-shadow: 0 0 3px rgba(0,0,0, .65);
 box-shadow: 0 0 3px rgba(0,0,0, .65);}
 .shop .heading a{float: right; color: rgb(154, 154, 155);margin: 5px 50px 0 0;font-weight: 700;}
-.shop .card{width: 182px;box-shadow: 0 0 2px rgba(0,0,0, .65);}
+.shop .card{height: 320px; width: 182px;box-shadow: 0 0 2px rgba(0,0,0, .65);}
 .shop .card img{height: 180px;width: 180px;}
 .shop .card-body{padding: 5px 7px 0 5px; background-color: #dfdcdc;}
 .shop .card-body .ratings{font-size: 10px;}
 .shop .owl-carousel{padding-left: 10px;}
 .shop .item{padding: 0 10px;}
-.shop .item a{color: #383838;}
+.shop  a{color: #383838;}
 #new-item .owl-nav .owl-prev,
 #new-item .owl-nav .owl-next{
     color: #f3efef;
@@ -698,7 +698,7 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     .shop .heading{margin: 5px 0 ;}
     .shop .heading span{width: 50%;padding: 2px 10px;font-size: 10px;font-weight: 700;margin: 0 0 0 70px;}
     .shop .heading a{margin: 5px 10px;font-size: 10px;}
-    .shop .card{width: 157px; box-shadow: 0 0 1px rgba(0,0,0, .65);}
+    .shop .card{width: 157px; box-shadow: 0 0 1px rgba(0,0,0, .65); height: 260px;}
     .shop .card img{height: 157px;width: 157px;}
     .shop .card-body{padding: 5px 7px 0 5px; background-color: #dfdcdc;font-size: 10px;}
     .shop .card-body h6{font-size: 10px;}
@@ -744,6 +744,25 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     #hit-item .owl-nav .owl-next{
         right: 1px;
     }
+    /* seller-shop */
+        .seller-shop{
+            position: relative;
+            top: 10px;
+        }
+        .seller-shop .card{
+            margin: 0;
+            padding: 0;
+            width: 140px;
+            height: 250px;
+        }
+        .seller-shop .card img{
+            width: 138px;
+            height: 138px;
+        }
+        .seller-shop .heading{
+            margin-left: -70px;
+        }
+    /* //seller-shop */
     #single-product{display: none;}
     .mobile-single-product{display: block;position: relative; top: 80px;box-shadow: 0 0 3px rgba(0,0,0, .65);margin: 0 5px;}
     .mobile-single-product img{height: 200px; width: 200px;margin: 5px;}

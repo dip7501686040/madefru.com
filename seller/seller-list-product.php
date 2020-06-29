@@ -1,9 +1,19 @@
 <?php
     include('header.php');
+    if(!isset($_SESSION['seller_id'])){
+?>
+<script>
+    $(document).ready(function(){
+        alert("please login to list a product");
+        window.location.href="index.php";
+    });
+</script>
+<?php
+    }
 ?>
 <div id="list-product-container">
     <div class="list-product">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
         <ul class="list-row">
             <li>
                 <ul class="list-col">
@@ -98,6 +108,16 @@
                 </ul>
             </li>
             <li>
+                <ul class="list-col d-flex">
+                    <li>
+                        <label class="mr-5" for="">Upload product images</label>
+                    </li>
+                    <li>
+                        <input type="file" name="product_images[]" multiple>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <ul class="list-col">
                     <li id="submit-button">
                         <input type="submit" name="submit" id="submit" value="Submit">
@@ -141,12 +161,28 @@
 <?php
     if(isset($_POST['submit'])){
         include('seller_product_id.php');
+
+        $imgcount=count($_FILES['product_images']['name']);
+
         $query="insert into `seller_product` (`id`, `seller_id`, `seller_product_id`, `product_name`, `category`, `subcategory`, `subsubcategory`, 
         `price`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$seller_product_id', '$_POST[product_name]', '$_POST[new_category]', 
         '$_POST[new_subcategory]', '$_POST[new_subsubcategory]', '$_POST[product_price]', 'not-approved', '$row1[id]',CURDATE(),CURTIME())";
         if($result=$db_handle->runQuery($query)){
-            echo"<script>alert('product listed successfully')</script>";
-            echo"<script>window.location.href='seller-list-product.php'</script>";
+
+            for($i=0;$i<$imgcount;$i++){
+                $imgname=$_FILES['product_images']['name'][$i];
+
+                $query1="insert into `seller_product_img` (`id`, `seller_product_id`, `img`) values (NULL, '$seller_product_id', '$imgname')";
+                if($db_handle->runQuery($query1)){
+                    move_uploaded_file($_FILES['product_images']['tmp_name'][$i], '../images/'.$imgname);
+                    echo"<script>alert('product listed successfully')</script>";
+                    echo"<script>window.location.href='seller-list-product.php'</script>";
+                }
+                else{
+                    echo"<script>alert('Image upload Error')</script>";
+                    echo"<script>window.location.href='seller-list-product.php'</script>";
+                }
+            }
         }
         else{
             echo"<script>alert('sorry failed')</script>";

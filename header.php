@@ -55,7 +55,7 @@ if(isset($_POST['add-to-cart'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madefru</title>
     <!-- css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.1" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
