@@ -936,7 +936,7 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     [data-href] {
         cursor: pointer;
     } 
-    .cart{position: absolute; right: 23px;}
+    .cart{position: absolute; right: 15px;}
     .cart a{width: 40px;height: 20px;}
     .cart a .cart-icon{font-size: 15px;}
     .cart a span{width: 10px;height: 12px;margin: 0px 4px;font-size: 12px;}
@@ -969,11 +969,14 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     .mobile-cart .summery1 ul li a{color: rgb(100, 100, 100);}
     .mobile-cart .summery1 ul li h6{font-size: 10px;}
     .mobile-cart .summery1 ul li input{height: 6px; width: 6px;}
-    .wishlist{position: absolute;}
+    .wishlist{position: absolute; right: 30px;}
     .wishlist a{width: 40px;height: 20px;}
     .wishlist a .wishlist-icon{font-size: 15px;}
     .wishlist a span{width: 10px;height: 12px;margin: 0px 4px;font-size: 12px;}
     .wishlist a span .value{margin: -5px 0 0 0;}
+    #sell-on-madefru{position: relative; right: 15px;}
+    #sell-on-madefru a{width: 40px;height: 20px;padding: 0;}
+    #sell-on-madefru .sell-on-madefru-icon{font-size: 12px;}
     .desktop-nav{position: absolute;visibility: hidden;}
     .banner{top: 60px;}
     .banner img{height: 150px;}

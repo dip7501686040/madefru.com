@@ -57,7 +57,7 @@ if(isset($_POST['add-to-cart'])){
     <link rel="shortcut icon" href="images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.2" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.3" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -257,7 +257,7 @@ $('nav').slideAndSwipe();
             <div class="col">
                 <div id="sell-on-madefru">
                     <a class="btn btn-dark" href="seller/index.php" role="button">
-                        <div class="wishlist-icon">
+                        <div class="sell-on-madefru-icon">
                             <i class="fas fa-store" aria-hidden="true"></i>
                         </div>
                     </a>
