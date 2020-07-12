@@ -23,7 +23,7 @@ header{position: fixed; padding: 0;margin: 0; background-color: rgb(253, 253, 25
 #searchlist{position: absolute;background-color: white;color: rgb(114, 112, 112);padding: 5px 10px;border-radius: 7px;z-index: 999;display: none;}
 /* //search */
 /* login-signup */
-.login-signup{padding: 0;margin: 5px 0 0 160px;}
+.login-signup{padding: 0;margin: 5px 0 0 140px;}
 .login-signup .btn{padding: 0 2px;height: 30px;width: auto;background-color: #05d70a;color: rgb(49, 49, 48);
 font-weight: 700;text-decoration: none;}
 .login-signup .btn:hover{background-color: rgb(152, 226, 185);color: rgb(49, 49, 48);}
@@ -162,7 +162,7 @@ border: 1px solid rgb(193, 196, 195);}
 .mobile-cart{display: none;}
 /* //cart */
 /* wishlist */
-.wishlist{padding: 0;margin: 5px 0 0 -20px;}
+.wishlist{padding: 0;margin: 5px 0 0 0;}
 .wishlist a{text-decoration: none; width: 45px;height: 30px;padding: 0;background-color: #05d70a;
 color: rgb(49, 49, 48);}
 .wishlist a .wishlist-icon{float: left;font-size: 20px;margin: -2px 0 0 5px;padding: 0;}
@@ -175,6 +175,16 @@ color: rgb(49, 49, 48);}
 box-shadow: 0 0 5px rgba(0,0,0, .65);}
 .wishlistcontainer img{height: 80px;width: 50px;}
  /* //wishlist */
+ /* sell on madefru */
+ #sell-on-madefru{
+     margin: 5px 0 0 -20px;
+ }
+ #sell-on-madefru a{text-decoration: none; width: 45px;height: 30px;padding: 0;background-color: #05d70a;
+color: rgb(49, 49, 48);
+ }
+ #sell-on-madefru a:hover{
+     background-color: rgb(43, 43, 43);
+     color: white; }
  /* //fix header */
 /* navbar */
 .desktop-nav{background-color: #05d70a;text-align: center;height: 30px;}
