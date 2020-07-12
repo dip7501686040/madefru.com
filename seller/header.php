@@ -15,8 +15,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell on Madefru</title>
+    <link rel="shortcut icon" href="../images/mf_logo6.png" type="image/x-icon">
+    <link rel="icon" href="../images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.2" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.3" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -83,7 +85,7 @@
                             $query="select seller_id from seller where seller_id='$_SESSION[seller_id]'";
                             $result=$db_handle->runQuery($query);
                             $data=$result->fetch_assoc(); 
-                            echo "Seller ID- $data[seller_id]";
+                            echo "Artist ID- $data[seller_id]";
                         ?>
                     </button>
                     <div class="modal fade" id="sellerlogout-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -107,7 +109,7 @@
                 else{
                     ?>
                     <button id="sellerlogin" class="btn" type="button" data-toggle="modal" data-target="#sellerlogin-modal">
-                        Login for existing seller
+                        Login for existing Artist
                     </button>
                     <div class="modal fade" id="sellerlogin-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">

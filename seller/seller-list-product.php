@@ -11,6 +11,51 @@
 <?php
     }
 ?>
+
+<script>
+$(document).ready(function(){
+    $("#category").on("change", function(e){
+            let category = $("option:selected", this).val();
+            $("#new-category").val(category)
+            $('#sub-category').empty(); //remove all existing options
+            $('#sub-sub-category').empty();
+            $('#sub-category').append("<option value=''>select</option>");
+            $('#sub-sub-category').append("<option value=''>select</option>");
+            ///////
+            $.get('get_subcategory.php',{'category':category},function(return_data){
+                if(return_data.data.length>0){
+                    $('#msg').html( return_data.data.length + ' records Found');
+            $.each(return_data.data, function(key,value){
+                    $("#sub-category").append("<option value='" + value.subcategory+"'>"+value.subcategory+"</option>");
+                });
+                }else{
+                $('#msg').html('No records Found');
+            }
+            }, "json");
+        });
+        $("#sub-category").on("change", function(e){
+            let subcategory = $("option:selected", this).val();
+            $("#new-sub-category").val(subcategory);
+            $('#sub-sub-category').empty(); //remove all existing options
+            $('#sub-sub-category').append("<option value=''>select</option>")
+            ///////
+            $.get('get_subsubcategory.php',{'subcategory':subcategory},function(return_data){
+                if(return_data.data.length>0){
+                    $('#msg').html( return_data.data.length + ' records Found');
+            $.each(return_data.data, function(key,value){
+                    $("#sub-sub-category").append("<option value='" + value.subsubcategory+"'>"+value.subsubcategory+"</option>");
+                });
+                }else{
+                $('#msg').html('No records Found');
+            }
+            }, "json");
+        });
+        $("#sub-sub-category").on("change", function(e){
+            let subsubcategory = $("option:selected", this).val();
+            $("#new-sub-sub-category").val(subsubcategory);
+        });
+});
+</script>
 <div id="list-product-container">
     <div class="list-product">
         <form action="" method="post" enctype="multipart/form-data">
@@ -23,6 +68,15 @@
                     <li>
                         <select name="category" id="category">
                             <option value="select">Select</option>
+                            <?php
+                            $query="select * from category";
+                            $result = $db_handle->runQuery($query);
+                            while($category=$result->fetch_assoc()){
+                            ?>
+                            <option value="<?php echo $category['category']; ?>"><?php echo $category['category']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </li>
                 </ul>
@@ -57,7 +111,7 @@
                         <label for="">Add new Sub-Category</label>
                     </li>
                     <li>
-                        <input type="text" name="new_subcategory" id="new-category">
+                        <input type="text" name="new_subcategory" id="new-sub-category">
                     </li>
                 </ul>
             </li>
@@ -81,7 +135,7 @@
                         <label for="">Add new Sub-Sub-Category</label>
                     </li>
                     <li>
-                        <input type="text" name="new_subsubcategory" id="new-category">
+                        <input type="text" name="new_subsubcategory" id="new-sub-sub-category">
                     </li>
                 </ul>
             </li>

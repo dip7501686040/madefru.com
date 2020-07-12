@@ -1,67 +1,70 @@
 <!-- footer -->
 <div id="footer">
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4 col-sm-6 col-xs-6">
-				<div class="logo-block">
-				    <a href="index.php"><img src="images/new madefru logo.jpg" alt="" /></a>
+    <div class="footer_position">
+		<div class="main_footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-12 col-sm-6 col-12">
+						<div class="footer_box">
+							<a href="#"><img src="images/madefru logo.png"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="footer_box">
+							<h2>Needed Link</h2>
+							<hr>
+							<ul>
+								<li><a href="#">Delivey Policy</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Return Policy</a></li>
+								<li><a href="#">Terms & Condition</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="footer_box">
+							<h2>Information</h2>
+							<hr>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Store Info</a></li>
+								<li><a href="#">FAQ's</a></li>
+								<li><a href="#">Join us as a Artist</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="footer_box">
+							<h2>Get In Touch</h2>
+							<hr>
+							<div class="footer_address">
+								<h6><a href="Location Map Link"><i class="fa fa-map-marker"></i> DumDum,Kol-700030</a></h6>
+								<h6><a href="tel:+919433205551"><i class="fa fa-phone"></i> +91-9433205551</a></h6>
+								<h6><a href="whatsapp:9433205551"><i class="fab fa-whatsapp"></i> 9433205551</a></h6>
+								<h6><a href="madefruonline@gmail.com"><i class="fa fa-envelope"></i> support@madefru.com</a></h6>
+							</div>
+							<div class="footer_socialicons">
+								<ul>
+									<li><a href="https://www.facebook.com/madefruonline/"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-				
-			</div>
-			<div class="col-md-2 col-sm-6 col-xs-6">
-				<h2>Information</h2>
-				<ul>
-					<li><a href="about.php">About us</a></li>
-					<li><a href="store.php">Store info</a></li>
-					<li><a href="faq.php">FAQ's</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 col-sm-6 col-xs-6 neededlinks">
-				<h2>Needed Links</h2>
-				<ul style="padding: 0 0 0 0;">
-					<li><a href="delivery.php">Delivery Policy</a></li>
-					<li><a href="privacy.php">Privacy Policy</a></li>
-					<li><a href="return.php">Return policy</a></li>
-					<li><a href="terms.php">Terms & Condition</a></li>
-				 
-				</ul>
-			</div>
-			<div class="col-md-3 col-sm-6 col-xs-6 contact">
-				<h2>Contact With Us</h2>
-				<ul>
-					<li><span><i class="fa fa-phone-volume"></i></span> : +91 1234567890</li>
-					<li><span><i class="fas fa-envelope"></i></span> : madefruonline@gmail.com</li>
-					<li><span><i class="fas fa-envelope"></i></span> : +91 1234567890</li>
-				</ul>
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-md-5">
-				
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+						<p>Copyright &copy; 2020 <a href="">Made For You Technology .Pvt.Ltd</a> All Rights Reserved.</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-3 ficon">
-				<h2></h2>
-				<ul class="icon">
-					<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-					<li><a href="#"><i class="fab fa-twitter-square"></i><a></li>
-					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-				</ul>
-			</div>
-
-			<div class="col-md-4">
-				
-			</div>
-
 		</div>
-		<div class="clearfix"> </div>
 	</div>
-</div>
-<div class="copy-right">
-	<div class="container">
-		<p>Copyright&copy; 2020 madefru. All rights reserved | Developed by Dipankar Saha</p>
-	</div>
-</div>
 </div>
 <script>
 	$(document).ready(function(){

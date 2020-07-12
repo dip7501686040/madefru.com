@@ -42,6 +42,14 @@
             </a>
         </li>
     </ul>
+    <ul>
+        <li>
+            <a href="shop-setup.php">
+                <span><i class="fas fa-warehouse"></i></span>
+                <h6>Shop Setup</h6>
+            </a>
+        </li>
+    </ul>
 </div>
 <div class="dashboard-footer">
     <?php

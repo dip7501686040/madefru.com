@@ -28,10 +28,11 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
 /* //seller fix header */
 /* open shop */
     #open-shop{position: relative;top: 50px;background-color: rgb(2, 143, 11);height: 400px;}
-    #open-shop img{width: 30%;height: 250px;margin: 50px 10px;}
-    #open-shop .text{position: absolute;top: 50px;left: 460px; display: inline-block;width: 30%;color: rgb(238, 238, 238);
+    #open-shop .banner{position: relative; top: 40px;left: 10px; width: 37%;height: 300px;}
+    #open-shop .banner img{height: 300px; width: 100%;}
+    #open-shop .text{position: absolute;top: 50px;left: 550px; display: inline-block;width: 30%;color: rgb(238, 238, 238);
     text-shadow: 0 0 10px rgb(46, 45, 45);}
-    #open-shop .register{position: absolute;top: 20px;right: 80px; display: inline-block;width: 25%; background-color: white;
+    #open-shop .register{position: absolute;top: 20px;right: 30px; display: inline-block;width: 25%; background-color: white;
     padding: 20px 0;border-radius: 5px;box-shadow: 0 0 5px rgb(77, 76, 76);}
     #open-shop .register input[type="text"],
     #open-shop .register input[type="email"],
@@ -44,13 +45,14 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     #query-erorr{position: absolute;top: 2px; font-size: 12px; color: red; padding-left: 15px; display: none;}
     #phone-exist{position: absolute;top: 146px; font-size: 12px; color: red; padding-left: 15px; display: none;}
     #email-exist{position: absolute;top: 192px; font-size: 12px; color: red; padding-left: 15px; display: none;}
+    #register-next{position: absolute;top: 20px;right: 30px; display: inline-block;width: 25%; background-color: white;
+    padding: 20px 0;border-radius: 5px;box-shadow: 0 0 5px rgb(77, 76, 76);display: none;}
 /* //open shop */
 /* seller-content */
     #seller-content{position: relative; top: 50px;}
-    #seller-content img{height: 500px; width: 100%;margin-top: 20px;}
 /* //seller-content */
 /* dashboard */
-    #dashboard{position: relative;top: 100px;height: 400px;width: 60%;margin: 0 250px;box-shadow: 0 0 10px rgb(177, 176, 176);}
+    #dashboard{position: relative;top: 100px;min-height: 450px;width: 60%;margin: 0 250px;box-shadow: 0 0 10px rgb(177, 176, 176);}
     #dashboard ul{position: relative;top: 50px;left: 110px;}   
     #dashboard ul li{display: inline-block;margin: 20px 20px; background-color: green;height: 80px;width: 150px;border-radius: 10px;}
     #dashboard ul li a{color: white;text-align: center;}
@@ -87,8 +89,108 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
            display: none;
        }
 /* //all product */
+/* why sell */
+.why-sell-section{
+    display: flex;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 0;
+}
+.why-sell-section img{
+    width: 40%;
+    height: 400px;
+    margin: 80px 20px 0 20px;
+}
+.why-sell-section .inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 50px 50px 0 50px;
+}
+
+.why-sell-section .inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #5fb709;
+}
+
+.why-sell-section .text{
+    font-size: 20px;
+    color: #262626;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+/* //why sell */
+/* how to sell */
+    #how-to-sell img{
+        width: 60%;
+        height: 400px;
+        margin-left: 260px;
+    }
+/* //how to sell */
+/* contact us */
+ #contact-section .container{
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+
+    #contact-section{
+      background: #262626;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      width: 100% ;
+      padding-bottom: 2%;
+    }
+
+    #contact-section .container h2{
+      text-align: center;
+       text-decoration: underline;
+        text-underline-position: under;
+        color: #5fb709;
+        letter-spacing: 2px;
+        
+    }
+
+    #contact-section .contact-form i.fa{
+      font-size: 20px; 
+      padding: 2%;
+      background-color: none;
+      border-radius: 80%;
+      margin: 2%;
+      cursor: pointer;
+      border:2px solid white;
+      color: white;
+    }
+    
+    #contact-section .contact-form i.fa:hover{
+      cursor: pointer;
+      border:2px solid #5fb709;
+      color: #5fb709;
+    }
+     
+    #contact-section  .contact-form{
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        margin-left: 280px;
+         }
+      
+    #contact-section .form-info{
+        font-size: 16px;
+        font-style: italic;
+        color: white;
+        letter-spacing: 2px;
+      }
+/* //contact us */
 /* footer */
-    footer{height: 250px;background-color: rgb(86, 173, 96);}
     .index-footer{position: relative;top: 100px;}
     .dashboard-footer{position: relative;top: 250px;}
     .list-product-footer{position: relative;top: 200px;}
@@ -120,7 +222,8 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
 
     /* open shop */
     #open-shop{position: relative;top: 55px; height: auto; padding-bottom: 25px;}
-    #open-shop img{width: 100%; height: 200px; margin: 5px 0;}
+    #open-shop .banner{position: relative; top: 0; left: 0; width: 100%;height: 200px;}
+    #open-shop .banner img{height: 200px;}
     #open-shop .text{position: relative;top: -50px;left: 5px;text-shadow: 0 0 5px rgb(46, 45, 45); width: 35%;}
     #open-shop .text h3{position: relative; font-size: 14px;}
     #open-shop .text h4{font-size: 13px;}
@@ -135,6 +238,37 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     #phone-exist{position: absolute;top: 115px; font-size: 11px; color: red; padding-left: 15px; display: none;}
     #email-exist{position: absolute;top: 194px; font-size: 11px; color: red; padding-left: 15px; display: none;}
 /* //open shop */
+/* why sell */
+.why-sell-section{
+    display: block;
+}
+    .why-sell-section img{
+        display: block;
+        margin: 5px;
+        width: 97%;
+        height: 200px;
+    }
+    .why-sell-section .inner-container{
+        display: block;
+        width: 92%;
+        padding: 0;
+        margin-right: 16px;
+    }
+/* //why sell */
+/* how to sell */
+    #how-to-sell img{
+        width: 97%;
+        height: 200px;
+        margin: 5px;
+    }
+/* //how to sell */
+
+/* contact us */
+    #contact-section .contact-form{
+        padding: 0;
+        margin: 5px 0;
+    }
+/* //contact us */
     /* dashboard */
     #dashboard{position: relative;top: 80px;height: 650px;width: 90%;margin: 0 15px;}
     #dashboard ul{position: relative;top: 30px;left: 0;}   
@@ -180,6 +314,7 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
            width: 60px;
        }
     /* //all product */
+
 }
 
 /* //responsive */

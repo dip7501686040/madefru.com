@@ -173,7 +173,7 @@
         <!-- //hit item -->
     </div>
     <!-- //shop -->
-    <div class="testimonial1">
+    <!-- <div class="testimonial1">
             <div class="whymadefru-container">
     <div class="services-section">
       <div class="inner-width">
@@ -244,7 +244,7 @@
     <div class="testimonial3">
         <div class="heading">Customer Review</div>
         <div class="clearfix"></div>
-    </div>
+    </div> -->
 <!-- footer -->
 <div class="index-footer">
 <?php include('footer.php'); ?>

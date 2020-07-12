@@ -23,7 +23,8 @@ include('header.php');
                         $("#email-exist").css("display","block");
                     }
                     else if($data=='3'){
-                        window.location.href="dashboard.php";
+                        $("#open-shop .register").css("display", "none")
+                        location.href = "dashboar.php";
                     }
                     else if($data=='4'){
                         $("#query-erorr").css("display","block");
@@ -55,13 +56,47 @@ include('header.php');
     }
 ?>
 <div id="open-shop">
-    <img src="../images/gestion-tienda-fisica-y-online.jpg" alt="">
+    <div class="banner">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img class="d-block w-100" src="../images/gestion-tienda-fisica-y-online.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/seller.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/Seller5.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/Seller3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/Seller4.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/seller6.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="../images/seller7.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    </div>
     <span class="text">
         <h3>Start your online handicraft shop today</h3>
         <br>
         <h5>Give a platform to your handicraft skills by listing your products on Madefru.</h5>
         <br>
-        <h4>Register as a seller -></h4>
+        <h4>Register as a Artist -></h4>
     </span>
     <span class="register">
         <form id="register-form" action="" method="POST">
@@ -83,11 +118,32 @@ include('header.php');
     </span>
 </div>
 <div id="seller-content">
-    <img src="../images/sell on madefru.jpg" alt="">
-    <img src="../images/how to sell on madefru2.jpg" alt="">
+    <div class="why-sell-section">
+        <img src="../images/pic.jpg" alt="">
+        <div class="inner-container">
+            <h1>Why Sell On Madefru</h1>
+            <p class="text">
+                Madefru is a online buyer and seller community,it focuses on
+                hand-crafted products. If you are a artist or artisan or simply a
+                handmade product maker then you can sell your item here instead of
+                building a website and all other expenses. Madefru is a fully free
+                alternative. we are an ecosystem between the creator and customer.
+                Before internet artist sell their product in person at fair or open
+                market and many of them still do business that way but Madefru give
+                them an opportunity to sell their products beyond their local area and
+                to a huge customer base without the hassle of setting up their own
+                website or e-commerce platform. Every creator can set up a online shop
+                on MF with fully e-commerce capabilities. It is fully free,fast,easy
+                and of course made for you.
+            </p>
+        </div>
+    </div>
+    <div id="how-to-sell">
+        <img src="../images/how to sell on madefru2.jpg" alt="">
+    </div>
 </div>
 <div class="index-footer">
-    <?php
+     <?php
         include('footer.php');
-    ?>
+     ?>
 </div>

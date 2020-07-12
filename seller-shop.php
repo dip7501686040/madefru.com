@@ -6,8 +6,12 @@
 ?>
 <div class="seller-shop">
     <div class="shop">
+
     <div class="heading">
-        <span>SELLER NAME - <?php echo $seller['name'] ?></span>
+        <span>ARTIST'S PRODUCT</span>
+        <!-- <span class="share" style="padding: 0 5px; float: right; width: auto; margin: 0 20px;">
+            <a href=""><i class="fas fa-share"></i></a>
+        </span> -->
     </div>
     <div class="container-fluid">
         <div class="row">
