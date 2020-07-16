@@ -23,8 +23,7 @@ include('header.php');
                         $("#email-exist").css("display","block");
                     }
                     else if($data=='3'){
-                        $("#open-shop .register").css("display", "none")
-                        location.href = "dashboar.php";
+                        location.href = "dashboard.php";
                     }
                     else if($data=='4'){
                         $("#query-erorr").css("display","block");
@@ -139,7 +138,44 @@ include('header.php');
         </div>
     </div>
     <div id="how-to-sell">
-        <img src="../images/how to sell on madefru2.jpg" alt="">
+        <div class="feature-section">
+            <div class="containr">
+                <div class="head pb-4">
+                    <h1>HOW TO SELL ON MADEFRU</h1>
+                </div>
+                <div class="features-inner">
+
+                    <div class="features-box">
+                        <div class="icon">
+                            <h1>1.</h1>
+                            <img src="crieat.png" alt="">
+                        </div>
+                        <h1>Register with us & Create an Artist account</h1>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="icon">
+                            <h1>2.</h1>
+                            <img src="list.png" alt="">
+                        </div>
+                        <h1>List your Product & details</h1>
+                    </div>
+                    
+                    <div class="features-box">
+                        <div class="icon">
+                            <h1>3.</h1>
+                            <img src="relax.png" alt="">
+                        </div>
+                        <h1>You relax now, We are responsible for selling your product</h1>
+                    </div>
+
+                </div>
+                <div class="note pt-4">
+                    <p>NOTE: Product Picture quality shoud be good, Details seen to well</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 <div class="index-footer">

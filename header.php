@@ -57,7 +57,7 @@ if(isset($_POST['add-to-cart'])){
     <link rel="shortcut icon" href="images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.3" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.5" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -66,6 +66,8 @@ if(isset($_POST['add-to-cart'])){
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css" type="text/css">
     <link rel="stylesheet" href="css/slide-and-swipe-menu.css" type="text/css">
+    <link href = "css/jquery-ui.css" rel = "stylesheet">
+
     <script src="js/jquery-3.5.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
@@ -76,6 +78,7 @@ if(isset($_POST['add-to-cart'])){
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/jquery.slideandswipe.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <!--//-->
     <!--fontawsome cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.js" 

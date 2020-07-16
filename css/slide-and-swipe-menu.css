@@ -4,7 +4,7 @@
  /* mobile sidebar*/
 nav {
     position: fixed;top: 0;bottom: 0; height: 100vh; width: 250px;overflow-y: scroll;overflow-x: visible;
-    transform: translate(-250px,0);background-color: rgb(72, 97, 97); z-index: 99;
+    transform: translate(-250px,0);background-color: rgb(72, 97, 97); z-index: 199;
 }
 .ssm-overlay {
 	position: fixed;
@@ -14,10 +14,10 @@ nav {
 	left: 0;
 	background-color: rgba(0,0,0,0.3);
     display: none;
-    z-index: 99;
+    z-index: 199;
 }
 .ssm-toggle-nav{position: absolute;top: 10px; left: 12px;display: none;}
-.ssm-toggle-nav div{background: #05d70a; margin-bottom: 2px;height: 2px; width: 14px;}
+.ssm-toggle-nav div{background: #05d70a; margin-bottom: 3px;height: 2px; width: 18px;}
 .ssm-toggle-nav div:last-child{margin-bottom: 0;}
 @media only screen and (min-width:320px) and (max-width: 480px){
     nav{display: block;}

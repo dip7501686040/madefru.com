@@ -4,6 +4,9 @@
     $result=$db_handle->runQuery($query);
     $seller=$result->fetch_assoc();
 ?>
+<div id="seller-shop-banner">
+    <h1>Artist - <?php echo $seller['name'] ;?></h1>
+</div>
 <div class="seller-shop">
     <div class="shop">
 
