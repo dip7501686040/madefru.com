@@ -57,7 +57,7 @@ if(isset($_POST['add-to-cart'])){
     <link rel="shortcut icon" href="images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.5" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.7" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
