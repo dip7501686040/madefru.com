@@ -20,7 +20,8 @@ header{position: fixed; padding: 0;margin: 0; background-color: rgb(253, 253, 25
 .search button{margin: 0 0 0 27px;width: 50px;height: 40px;overflow: hidden;font-size: 20px;text-align: center;
                padding-top: 2.5px;background-color: white; color: rgb(49, 49, 48);border: 2px groove rgb(189, 185, 185); border-left: none;
                border-radius: 0 7px 7px 0;}
-#searchlist{position: absolute;background-color: white;color: rgb(114, 112, 112);padding: 5px 10px;border-radius: 7px;z-index: 999;display: none;}
+#searchlist{position: absolute;background-color: white;color: rgb(114, 112, 112);
+padding: 5px 10px;border-radius: 7px;z-index: 999;display: block; height: 400px; overflow-y: scroll; display: none;}
 /* //search */
 /* login-signup */
 .login-signup{padding: 0;margin: 5px 0 0 140px;}
@@ -491,6 +492,19 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
 .seller-shop .seller-details{text-align: center;}
 #go-to-shop{margin-left: 600px; color: rgb(218, 243, 243);}
 #client-shop{position: relative;top: 100px;}
+#client-shop .card{height: 320px; width: 182px;box-shadow: 0 0 2px rgba(0,0,0, .65);}
+#client-shop .card img{height: 180px;width: 180px;}
+#client-shop .card-body{padding: 5px 7px 0 5px; background-color: #dfdcdc;}
+#client-shop .card-body .ratings{font-size: 10px;}
+#client-shop .owl-carousel{padding-left: 10px;}
+#client-shop .item{padding: 0 10px;}
+#client-shop a{color: #383838;}
+#loading
+{
+	text-align:center; 
+	background: url('/images/loader.gif') no-repeat center;
+	height: 150px;
+}
 /* //shop */
 /* testimonial */
 .testimonial1{position: relative;top: 75px; height: 250px;background-color: rgb(201, 202, 201);}
@@ -896,6 +910,7 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     .search input{width: 315px;height: 25px; font-size: 10px; border: 1px solid rgb(189, 190, 189); border-right: none;}
     .search button{position: absolute;left: 315px; height: 25px; width: 35px; font-size: 10px; margin: 4px 0 0 0;border: 1px solid rgb(189, 190, 189);
     border-left: none;padding-top: 5px;}
+    #searchlist{top: 59px; padding: 0 10px; width: 355px; height: 422px; margin-left: -60px; overflow-y: scroll;}
     .login-signup{position: absolute;right: 0px;}
     .login-signup .btn{height: 20px;width: auto;font-size: 10px;}
     .login-signup .btn:hover{background-color: rgb(152, 226, 185);color: rgb(49, 49, 48);}
@@ -1108,6 +1123,23 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
             font-size: 25px;
         }
     /* //seller-shop */
+    /* client shop */
+    #go-to-shop{margin-left: 140px;}
+    #client-shop{position: relative;}
+    #client-shop .card{height: 290px; width: 160px; margin: 0;padding: 0;}
+    #client-shop .card img{height: 153px;width: 153px;}
+    #client-shop .card-body .ratings{font-size: 10px;}
+    #client-shop a{color: #383838;}
+    #client-shop .card-body a h6{font-size: 14px;}
+    #loading
+{
+    position: relative;
+    top: 100px;
+	left: 0;
+	height: 100px;
+    margin-left: -150px;
+}
+    /* //client shop */
     #single-product{display: none;}
     .mobile-single-product{display: block;position: relative; top: 80px;box-shadow: 0 0 3px rgba(0,0,0, .65);margin: 0 5px;}
     .mobile-single-product img{height: 200px; width: 200px;margin: 5px;}
@@ -1119,6 +1151,7 @@ box-shadow: 0 0 10px rgba(0,0,0, .65);}
     .testimonial3{height: 150px;}
     .testimonial3 .heading{width: 50%;padding: 2px 10px;font-size: 10px;font-weight: 700;margin: 0 0 0 95px;}
     #footer{height: 980px;}
-    .index-footer{margin-top: 125px;}
+    .index-footer{margin-top: 150px;}
+    #client-shop-footer{height: 1126px !important; margin-top: 300px;}
 }
 /* //Mobile view */

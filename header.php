@@ -57,7 +57,7 @@ if(isset($_POST['add-to-cart'])){
     <link rel="shortcut icon" href="images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.7" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.15" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -79,6 +79,7 @@ if(isset($_POST['add-to-cart'])){
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/jquery.slideandswipe.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <!--//-->
     <!--fontawsome cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.js" 
@@ -93,16 +94,25 @@ if(isset($_POST['add-to-cart'])){
 $(document).ready(function(){ 
 {/* live search */}   
 $("#search").keyup(function(){
+    $("#searchlist").html('');
     $search = $(this).val();
     if($search.length>0){
         $.get("livesearch_result.php",{"search":$search},function($data){
-            $("#searchlist").html($data);
+            $("#searchlist").append('<li class="text-right"><span id="searchlist-close" class="fas fa-times"></span></li>');
+            $("#searchlist").append('<li class="list-group-item">'+$data+'</li>');
             $("#searchlist").css("display","block");
         })
     }
     else{
         $("#searchlist").css("display","none");
     }
+});
+
+$("#search").focusout(function(){
+    $("#searchlist").css("display","none");
+});
+$("#searchlist-close").on("click", function(){
+    $("#searchlist").css("display","none");
 });
 {/* //live search $category=$("#nav-category").html();
         $.get("navbar_span.php",{"category":$category},function($data){
@@ -138,7 +148,7 @@ $('nav').slideAndSwipe();
                     while($row=$result->fetch_assoc()){
                     ?>
                 <li class="category">
-                    <a href="" class="mobile-product-category"><?php echo "$row[category]";?></a>
+                    <a href="client-shop.php?category=<?php echo "$row[category]";?>" class="mobile-product-category"><?php echo "$row[category]";?></a>
                     <ul>
                         <?php
                         $query1="select * from subcategory where category='$row[category]'";
@@ -146,7 +156,7 @@ $('nav').slideAndSwipe();
                         while($row1=$result1->fetch_assoc()){
                         ?>
                         <li>
-                            <a href="" class="mobile-product-subcategory"><?php echo "$row1[subcategory]";?></a>
+                            <a href="client-shop.php?subcategory=<?php echo "$row1[subcategory]";?>" class="mobile-product-subcategory"><?php echo "$row1[subcategory]";?></a>
                             <ul>
                                 <?php
                                 $query2="select * from subsubcategory where subcategory='$row1[subcategory]'";
@@ -154,7 +164,7 @@ $('nav').slideAndSwipe();
                                 while($row2=$result2->fetch_assoc()){
                                 ?>
                                 <li class="subsubcategory">
-                                    <a href="" class="mobile-product-subsubcategory"><?php echo "$row2[subsubcategory]";?></a>
+                                    <a href="client-shop.php?subsubcategory=<?php echo "$row2[subsubcategory]";?>" class="mobile-product-subsubcategory"><?php echo "$row2[subsubcategory]";?></a>
                                 <div class="clearfix"></div>                                    
                                 </li>
                                 <?php }?>
@@ -193,8 +203,8 @@ $('nav').slideAndSwipe();
                         <div class="search">
                             <input id="search" type="search" name="search-input" placeholder="search for a product...." 
                             required autocomplete="off">
-                            <div id="searchlist"></div>
                         </div>
+                        <ul id="searchlist" class="list-group"></ul>
                     </div>
                     <div class="col-md-3">
                         <div class="search">
@@ -277,7 +287,7 @@ $('nav').slideAndSwipe();
                         while($row=$result->fetch_assoc()){
                         ?>
                     <li class="nav-category">
-                        <a href=""><?php echo "$row[category]";?></a>   
+                        <a href="client-shop.php?category=<?php echo "$row[category]";?>"><?php echo "$row[category]";?></a>   
                     </li>
                     <?php }?>
                     <li>

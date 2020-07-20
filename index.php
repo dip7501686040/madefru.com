@@ -172,7 +172,7 @@
         </div>
         <!-- //hit item -->
         <!--  client main shop -->
-        <!-- <a href="client-shop.php" class="btn btn-success" id="go-to-shop">Go To Shop</a> -->
+        <a href="client-shop.php" class="btn btn-success" id="go-to-shop">Go To Shop</a>
         <!-- //client main shop -->
     </div>
     <!-- //shop -->

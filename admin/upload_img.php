@@ -7,5 +7,5 @@ if(isset($_POST['file1']))
 $category_id=trim($_['category']);
 
 
-<?php }
+}
 ?>

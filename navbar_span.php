@@ -10,14 +10,14 @@ $result=$db_handle->runQuery($query);
     while($row=$result->fetch_assoc()){
    ?>
     <div class="col justify-content-center">
-        <a href=""><?php echo "$row[subcategory]";?></a>
+        <a href="client-shop.php?subcategory=<?php echo "$row[subcategory]";?>"><?php echo "$row[subcategory]";?></a>
         <?php
         $query1="select * from subsubcategory where subcategory='$row[subcategory]'";
         $result1=$db_handle->runQuery($query1);
         while($row1=$result1->fetch_assoc()){
         ?>
         <div class="row justify-content-center">
-            <a href=""><?php echo "$row1[subsubcategory]";?></a>
+            <a href="client-shop.php?subsubcategory=<?php echo "$row1[subsubcategory]";?>"><?php echo "$row1[subsubcategory]";?></a>
         </div>
         <?php }?>
     </div>
