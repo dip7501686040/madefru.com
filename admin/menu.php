@@ -67,28 +67,9 @@ else
 								
 								
 								<li>
-									<a href="banner.php">Add Banner</a>
+									<a href="all_orders.php">All orders</a>
 								</li>
-								<li>
-									<a href="all_banner.php">All Banner</a>
-								</li>
-								<li>
-									<a href="logo.php">Add Logo</a>
-								</li>
-								<li>
-									<a href="all_logo.php">All Logo</a>
-								</li>
-								
-								
-						 
-								
-								<li>
-									<a href="all_about.php">Edit About Page</a>
-								</li>
-								
-							  
-								
-								
+							
 								</ul>
 						</li>
 					

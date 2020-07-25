@@ -52,17 +52,21 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     #seller-content{position: relative; top: 50px;}
 /* //seller-content */
 /* dashboard */
-    #dashboard{position: relative;top: 100px;min-height: 450px;width: 60%;margin: 0 250px;box-shadow: 0 0 10px rgb(177, 176, 176);}
+    #dashboard{position: relative;top: 100px;min-height: 450px;width: 60%;margin: 0 250px;
+    box-shadow: 0 0 10px rgb(177, 176, 176);}
     #dashboard ul{position: relative;top: 50px;left: 110px;}   
-    #dashboard ul li{display: inline-block;margin: 20px 20px; background-color: green;height: 80px;width: 150px;border-radius: 10px;}
+    #dashboard ul li{display: inline-block;margin: 20px 20px; background-color: green;height: 80px;width: 150px;
+    border-radius: 10px;}
     #dashboard ul li a{color: white;text-align: center;}
     #dashboard ul li span{font-size: 35px; padding-left: 50px;}
 /* //dashboard */
 /* list product */
-    #list-product-container{position: relative;top: 100px;width: 90%;min-height: 500px; box-shadow: 0 0 10px rgb(182, 181, 181);margin: 0 70px;}
+    #list-product-container{position: relative;top: 100px;width: 90%; min-height: 800px; 
+    box-shadow: 0 0 10px rgb(182, 181, 181);margin: 0 70px;}
     .list-product{float: left;width: 50%;}
     .list-product .list-col{float: left; margin: 20px 20px 0 20px;}
     .list-product .list-col input, select{width: 250px;}
+    #list-product-container .description{width: 550px; height: 100px;}
     #list-content{padding: 20px 10px;}
     #submit-button{padding: 30px 0 0 150px;}
     #submit{background-color: indigo;border: none; color: white;}
@@ -327,6 +331,7 @@ body h1, h2, h3, h4, h5, h6{ padding:0; margin:0; }
     #list-product-container{position: relative;top: 90px; left: 10px; margin: 0; padding-top: 10px;}
     .list-product{margin-top: 270px;}
     .list-product .list-col{float: left; margin: 20px 20px 0 20px;}
+    #list-product-container .description{width: 250px; height: 150px;}
     .mobile-product{margin-top: -20px;}
     #list-content{padding: 20px 10px; margin-left: -150px;}
     #list-content h3{font-size: 15px;}

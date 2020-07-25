@@ -12,6 +12,7 @@
                 <th>Category</th>
                 <th>Sub category</th>
                 <th>Sub Sub category</th>
+                <th>Description</th>
                 <th>Status</th>
                 <th>Pickup address</th>
                 <th>Images</th>
@@ -33,6 +34,7 @@
                 <td><?php echo"$product[category]"; ?></td>
                 <td><?php echo"$product[subcategory]"; ?></td>
                 <td><?php echo"$product[subsubcategory]"; ?></td>
+                <td><?php echo"$product[description]"; ?></td>
                 <td><?php echo"$product[status]"; ?></td>
                 <?php
                     $query1="select * from pickup_address where id='$product[pickup_address_id]'";

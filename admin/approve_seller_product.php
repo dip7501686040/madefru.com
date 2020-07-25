@@ -154,7 +154,9 @@ $.each(return_data.data, function(key,value){
                 <div class="form-group row">
                     <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Product Description</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" name="product-desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="product-desc" id="exampleFormControlTextarea1" rows="3">
+                            <?php echo $seller_product['description']; ?>
+                        </textarea>
                     </div>
                 </div>
                 <div class="form-group row">

@@ -14,10 +14,10 @@
 							<h2>Needed Link</h2>
 							<hr>
 							<ul>
-								<li><a href="#">Delivey Policy</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Return Policy</a></li>
-								<li><a href="#">Terms & Condition</a></li>
+								<li><a href="delivery-policy.php">Delivey Policy</a></li>
+								<li><a href="privacy-policy.php">Privacy Policy</a></li>
+								<li><a href="return-policy.php">Return Policy</a></li>
+								<li><a href="terms-condition.php">Terms & Condition</a></li>
 							</ul>
 						</div>
 					</div>
@@ -26,10 +26,10 @@
 							<h2>Information</h2>
 							<hr>
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Store Info</a></li>
-								<li><a href="#">FAQ's</a></li>
-								<li><a href="#">Join us as a Artist</a></li>
+								<li><a href="about-us.php">About Us</a></li>
+								<li><a href="store-info.php">Store Info</a></li>
+								<li><a href="faqs.php">FAQ's</a></li>
+								<li><a href="seller/index.php">Join us as a Artist</a></li>
 							</ul>
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
-						<p>Copyright &copy; 2020 <a href="">Made For You Technology .Pvt.Ltd</a> All Rights Reserved.</p>
+						<p>Copyright &copy; 2020 <a>Made For You Technology .Pvt.Ltd</a> All Rights Reserved.</p>
 					</div>
 				</div>
 			</div>

@@ -162,17 +162,35 @@ $(document).ready(function(){
                 </ul>
             </li>
             <li>
-                <ul class="list-col d-flex">
+                <ul class="list-col">
+                    <div class="container">
                     <li>
                         <label class="mr-5" for="">Upload product images</label>
                     </li>
-                    <li>
-                        <input type="file" name="product_images[]" multiple>
+                    <li class="mb-2">
+                        <input type="file" name="product_images[]" required>
                     </li>
+                    <li class="mb-2">
+                        <input type="file" name="product_images[]" required>
+                    </li>
+                    <li class="mb-2">
+                        <input type="file" name="product_images[]" required>
+                    </li>
+                    </div>
                 </ul>
             </li>
             <li>
                 <ul class="list-col">
+                    <li>
+                        <label class="mr-5" for="">Add Description</label>
+                    </li>
+                    <li>
+                        <textarea name="description" class="description"></textarea>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="list-col pb-5">
                     <li id="submit-button">
                         <input type="submit" name="submit" id="submit" value="Submit">
                     </li>
@@ -216,11 +234,13 @@ $(document).ready(function(){
     if(isset($_POST['submit'])){
         include('seller_product_id.php');
 
-        $imgcount=count($_FILES['product_images']['name']);
+        if(isset($_FILES['product_images']['name'])){
 
+            $imgcount=count($_FILES['product_images']['name']);
+        }
         $query="insert into `seller_product` (`id`, `seller_id`, `seller_product_id`, `product_name`, `category`, `subcategory`, `subsubcategory`, 
-        `price`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$seller_product_id', '$_POST[product_name]', '$_POST[new_category]', 
-        '$_POST[new_subcategory]', '$_POST[new_subsubcategory]', '$_POST[product_price]', 'not-approved', '$row1[id]',CURDATE(),CURTIME())";
+        `price`, `description`, `status`, `pickup_address_id`,`date`, `time`) values (NULL, '$_SESSION[seller_id]', '$seller_product_id', '$_POST[product_name]', '$_POST[new_category]', 
+        '$_POST[new_subcategory]', '$_POST[new_subsubcategory]', '$_POST[product_price]', '$_POST[description]', 'not-approved', '$row1[id]',CURDATE(),CURTIME())";
         if($result=$db_handle->runQuery($query)){
 
             for($i=0;$i<$imgcount;$i++){
