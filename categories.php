@@ -36,7 +36,7 @@
                 <img src="images/painting.jpg">
             </div>
             <div class="details">
-                <h2>KPAINTING</h2>
+                <h2>PAINTING</h2>
             </div>
             <div class="clearfix"></div>
         </div>

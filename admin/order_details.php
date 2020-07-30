@@ -10,22 +10,31 @@
 <div id="page-wrapper">
 	<div class="main-page">
         <div class="order-details" style="background-color: white">
-            <h4 class="text-center" style="padding-bottom: 20px;"><?php echo $customer_order['order_id']; ?></h4>
-            <div class="d-flex justify-content-between">
-                <span class="customer-details">
-                    <label for="" class="m-2 d-block">
+            <h4 class="text-center py-3"><?php echo $customer_order['order_id']; ?></h4>
+            <div class="d-flex justify-content-between border">
+                <span class="customer-details mx-5 my-2">
+                    <label for="" class="d-block">
                         Customer Name: <?php echo $customer['name']; ?>
                     </label>
-                    <label for="" class="m-2 d-block">
+                    <label for="" class="d-block">
                         Customer Phone: <?php echo $customer['phone']; ?>
                     </label>
-                    <label for="" class="m-2 d-block">
+                    <label for="" class="d-block">
                         Customer Email: <?php echo $customer['email']; ?>
                     </label>
                 </span>
-                <span class="order-address m-2">
-                    <label for="">Order Address</label>
-                    
+                <span class="order-address mx-5 my-2 w-25 text-center border">
+                    <label for="" class="p-1">Order Address</label>
+                    <?php
+                        $query = "select * from order_address where id = '$customer_order[delivery_address_id]'";
+                        $result = mysqli_query($con,$query);
+                        $order_address=mysqli_fetch_assoc($result);
+                    ?>
+                    <div class="p-1">   
+                        <?php 
+                            echo $order_address['name'];
+                        ?>
+                    </div>
                 </span>
             </div>
 

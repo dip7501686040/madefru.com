@@ -1,182 +1,228 @@
-<?php include('header.php');?>
+<?php include('header.php'); ?>
 <!-- banner -->
-    <script>
-        $(document).ready(function(){
-            $(".carousel-item:first").addClass("active");
-        });
-    </script>
-    <div class="banner">
-        <div id="carouselExampleFade" class="carousel slide" data-ride="carousel"data-interval="3000">
-            <div class="carousel-inner">
+<script>
+    $(document).ready(function() {
+        $(".carousel-item:first").addClass("active");
+    });
+</script>
+<div class="banner">
+    <div id="carouselExampleFade" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
             <?php
-            $baner="select* from banner";
-            $runban=$db_handle->runQuery($baner);
-            while($lopban=mysqli_fetch_array($runban)){
-            
+            $baner = "select* from banner";
+            $runban = $db_handle->runQuery($baner);
+            while ($lopban = mysqli_fetch_array($runban)) {
+
             ?>
                 <div class="carousel-item">
                     <img src="images/<?php echo $lopban['banner_img']; ?>" class="d-block w-100" alt="...">
                 </div>
             <?php } ?>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <div class="clearfix"></div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <!-- categories -->
-    <?php
-    include('categories.php');
-    include('nxtcategories.php');
-    ?>
-    <!-- //categories -->
-    <!-- //banner -->
-    <!-- shop -->
-    <!-- new items -->
-    <div class="shop">
-        <div class="heading">
-            <span>NEW ITEMS FROM MADEFRU</span>
-            <a href="">view all</a>
+    <div class="clearfix"></div>
+</div>
+<!-- //banner -->
+
+<!-- feature box -->
+<div class="feature-section">
+    <div class="containr">
+        <div class="features-inner">
+
+            <div class="features-box">
+                <div class="icon">
+                    <img src="images/download.png" alt="">
+                </div>
+                <h1>Fastest Delivery</h1>
+                <p>Fast delivery on all orders</p>
+            </div>
+
+            <div class="features-box">
+                <div class="icon">
+                    <img src="images/payment.png" alt="">
+                </div>
+                <h1>Secure Payment</h1>
+                <p>Fast delivery on all orders</p>
+            </div>
+
+            <div class="features-box">
+                <div class="icon">
+                    <img src="images/support.jpg" alt="">
+                </div>
+                <h1>24*7 Support</h1>
+                <p>free shipping on all orders</p>
+            </div>
+
+            <div class="features-box">
+                <div class="icon">
+                    <img src="images/india.jpg" alt="">
+                </div>
+                <h1>Made in Inadia</h1>
+                <p>free shipping on all orders</p>
+            </div>
+
         </div>
-        <div id="new-item" class="owl-carousel">
+
+    </div>
+
+</div>
+<!-- //feature box -->
+
+<!-- categories -->
+<?php
+include('categories.php');
+include('nxtcategories.php');
+?>
+<!-- //categories -->
+
+<!-- shop -->
+<!-- new items -->
+<div class="shop">
+    <div class="heading">
+        <span>NEW ITEMS FROM MADEFRU</span>
+        <a href="">view all</a>
+    </div>
+    <div id="new-item" class="owl-carousel">
         <?php
-            $query="select * from product where new_item=1 order by product_id desc";
-            $result=$db_handle->runQuery($query);
-            while($row=$result->fetch_assoc()){
+        $query = "select * from product where new_item=1 order by product_id desc";
+        $result = $db_handle->runQuery($query);
+        while ($row = $result->fetch_assoc()) {
         ?>
-        <div class="item">
-            <div class="card">
-                <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
-                <?php
-                    $query1="select img from product_img where product_id='$row[product_id]'";
-                    $result1=$db_handle->runQuery($query1);
-                    $row1=$result1->fetch_assoc(); 
-                ?>
-                    <img class="card-img-top" src="images/<?php echo $row1['img'];?>" alt="Card image cap">
-                </a>
-                <div class="card-body">
+            <div class="item">
+                <div class="card">
                     <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
-                        <h6 class="card-title"><?php echo "$row[product_name]";?></h6>
-                        <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
+                        <?php
+                        $query1 = "select img from product_img where product_id='$row[product_id]'";
+                        $result1 = $db_handle->runQuery($query1);
+                        $row1 = $result1->fetch_assoc();
+                        ?>
+                        <img class="card-img-top" src="images/<?php echo $row1['img']; ?>" alt="Card image cap">
                     </a>
-                    <p><b>Rs. <del><?php echo "$row[price]";?></del> <?php echo "$row[net_price]";?></b><br> 
-                    <?php echo round($row['discount']);?>% discount
-                    <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
-                    <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
-                    </p>
+                    <div class="card-body">
+                        <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
+                            <h6 class="card-title"><?php echo "$row[product_name]"; ?></h6>
+                            <div class="ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </a>
+                        <p><b>Rs. <del><?php echo "$row[price]"; ?></del> <?php echo "$row[net_price]"; ?></b><br>
+                            <?php echo round($row['discount']); ?>% discount
+                            <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                            <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php } ?>
         <div class="clearfix"></div>
-        </div>
-        <!-- //new items -->
-        <!-- popular item -->
-        <div class="heading">
-            <span>POPULAR ITEMS FROM MADEFRU</span>
-            <a href="">view all</a>
-        </div>
-        <div id="popular-item" class="owl-carousel">
+    </div>
+    <!-- //new items -->
+    <!-- popular item -->
+    <div class="heading">
+        <span>POPULAR ITEMS FROM MADEFRU</span>
+        <a href="">view all</a>
+    </div>
+    <div id="popular-item" class="owl-carousel">
         <?php
-            $query="select * from product where popular_item=1 order by product_id desc";
-            $result=$db_handle->runQuery($query);
-            while($row=$result->fetch_assoc()){
+        $query = "select * from product where popular_item=1 order by product_id desc";
+        $result = $db_handle->runQuery($query);
+        while ($row = $result->fetch_assoc()) {
         ?>
-        <div class="item">
-            <div class="card">
-                <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>" style="position: relative;">
-                <?php
-                    $query1="select img from product_img where product_id='$row[product_id]'";
-                    $result1=$db_handle->runQuery($query1);
-                    $row1=$result1->fetch_assoc(); 
-                ?>
-                    <img class="card-img-top" src="images/<?php echo $row1['img'];?>" alt="Card image cap">
-                </a>
-                <div class="card-body">
+            <div class="item">
+                <div class="card">
                     <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>" style="position: relative;">
-                        <h6 class="card-title"><?php echo "$row[product_name]";?></h6>
-                        <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
+                        <?php
+                        $query1 = "select img from product_img where product_id='$row[product_id]'";
+                        $result1 = $db_handle->runQuery($query1);
+                        $row1 = $result1->fetch_assoc();
+                        ?>
+                        <img class="card-img-top" src="images/<?php echo $row1['img']; ?>" alt="Card image cap">
                     </a>
-                    <p><b>Rs. <del><?php echo "$row[price]";?></del> <?php echo "$row[net_price]";?></b><br> 
-                    <?php echo round($row['discount']);?>% discount
-                    <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
-                    <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
-                    </p>
+                    <div class="card-body">
+                        <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>" style="position: relative;">
+                            <h6 class="card-title"><?php echo "$row[product_name]"; ?></h6>
+                            <div class="ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </a>
+                        <p><b>Rs. <del><?php echo "$row[price]"; ?></del> <?php echo "$row[net_price]"; ?></b><br>
+                            <?php echo round($row['discount']); ?>% discount
+                            <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                            <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php } ?>
         <div class="clearfix"></div>
-        </div>
-        <!-- //popular item -->
-        <!-- hit item -->
-        <div class="heading">
-            <span>ALL TIME HIT ITEMS FROM MADEFRU</span>
-            <a href="">view all</a>
-        </div>
-        <div id="hit-item" class="owl-carousel">
-        <?php
-            $query="select * from product where hit_item=1 order by product_id desc";
-            $result=$db_handle->runQuery($query);
-            while($row=$result->fetch_assoc()){
-        ?>
-        <div class="item">
-            <div class="card">
-                <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
-                <?php
-                    $query1="select img from product_img where product_id='$row[product_id]'";
-                    $result1=$db_handle->runQuery($query1);
-                    $row1=$result1->fetch_assoc(); 
-                ?>
-                    <img class="card-img-top" src="images/<?php echo $row1['img'];?>" alt="Card image cap">
-                </a>
-                <div class="card-body">
-                    <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
-                        <h6 class="card-title"><?php echo "$row[product_name]";?></h6>
-                        <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </a>
-                    <p><b>Rs. <del><?php echo "$row[price]";?></del> <?php echo "$row[net_price]";?></b><br> 
-                    <?php echo round($row['discount']);?>% discount
-                    <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
-                    <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <?php } ?>
-        <div class="clearfix"></div>
-        </div>
-        <!-- //hit item -->
-        <!--  client main shop -->
-        <a href="client-shop.php" class="btn btn-success" id="go-to-shop">Go To Shop</a>
-        <!-- //client main shop -->
     </div>
-    <!-- //shop -->
-    <!-- <div class="testimonial1">
+    <!-- //popular item -->
+    <!-- hit item -->
+    <div class="heading">
+        <span>ALL TIME HIT ITEMS FROM MADEFRU</span>
+        <a href="">view all</a>
+    </div>
+    <div id="hit-item" class="owl-carousel">
+        <?php
+        $query = "select * from product where hit_item=1 order by product_id desc";
+        $result = $db_handle->runQuery($query);
+        while ($row = $result->fetch_assoc()) {
+        ?>
+            <div class="item">
+                <div class="card">
+                    <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
+                        <?php
+                        $query1 = "select img from product_img where product_id='$row[product_id]'";
+                        $result1 = $db_handle->runQuery($query1);
+                        $row1 = $result1->fetch_assoc();
+                        ?>
+                        <img class="card-img-top" src="images/<?php echo $row1['img']; ?>" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <a href="single_product.php?product_id=<?php echo $row['product_id']; ?>">
+                            <h6 class="card-title"><?php echo "$row[product_name]"; ?></h6>
+                            <div class="ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </a>
+                        <p><b>Rs. <del><?php echo "$row[price]"; ?></del> <?php echo "$row[net_price]"; ?></b><br>
+                            <?php echo round($row['discount']); ?>% discount
+                            <i class="fas fa-share-alt text-muted float-right my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                            <i class="fas fa-heart text-muted float-right my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+        <div class="clearfix"></div>
+    </div>
+    <!-- //hit item -->
+    <!--  client main shop -->
+    <a href="client-shop.php" class="btn btn-success" id="go-to-shop">Go To Shop</a>
+    <!-- //client main shop -->
+</div>
+<!-- //shop -->
+<!-- <div class="testimonial1">
             <div class="whymadefru-container">
     <div class="services-section">
       <div class="inner-width">
@@ -250,6 +296,6 @@
     </div> -->
 <!-- footer -->
 <div class="index-footer">
-<?php include('footer.php'); ?>
+    <?php include('footer.php'); ?>
 </div>
 <!-- //footer -->

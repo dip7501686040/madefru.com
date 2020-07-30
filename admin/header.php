@@ -25,7 +25,7 @@ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCm
 
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css?version=1.1" rel='stylesheet' type='text/css' />
 <!-- font CSS -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
