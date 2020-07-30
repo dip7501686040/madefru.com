@@ -5,7 +5,7 @@ $db_handle = new DBController();
 
 if(isset($_POST["action"]))
 {
-	$query = "SELECT * FROM product WHERE quantity >= 1";
+	$query = "SELECT * FROM product WHERE quantity >= 0";
 	if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"]))
 	{
 		$query .= " AND net_price BETWEEN '".$_POST["minimum_price"]."' AND '".$_POST["maximum_price"]."'";
@@ -61,20 +61,20 @@ if(isset($_POST["action"]))
 if($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["action"])) {
     if(isset($_POST["category"]) && !isset($_POST["subcategory"]) && !isset($_POST["subsubcategory"])){
         $category = trim($_POST["category"]);
-        $query = "SELECT * FROM product WHERE quantity >= 1 AND category = '$category'";
+        $query = "SELECT * FROM product WHERE quantity >= 0 AND category = '$category'";
     }
     elseif(isset($_POST["category"]) && isset($_POST["subcategory"]) && !isset($_POST["subsubcategory"]))
     {
         $category = trim($_POST["category"]);
         $subcategory = trim($_POST["subcategory"]);
-        $query = "SELECT * FROM product WHERE quantity >= 1 AND category = '$category' AND subcategory = '$subcategory'";
+        $query = "SELECT * FROM product WHERE quantity >= 0 AND category = '$category' AND subcategory = '$subcategory'";
     }
     elseif(isset($_POST["category"]) && isset($_POST["subcategory"]) && isset($_POST["subsubcategory"]))
     {
         $category = trim($_POST["category"]);
         $subcategory = trim($_POST["subcategory"]);
         $subsubcategory = trim($_POST["subsubcategory"]);
-        $query = "SELECT * FROM product WHERE quantity >= 1 AND category = '$category' AND subcategory = '$subcategory' AND subsubcategory = '$subsubcategory'";
+        $query = "SELECT * FROM product WHERE quantity >= 0 AND category = '$category' AND subcategory = '$subcategory' AND subsubcategory = '$subsubcategory'";
     }
     $result = $db_handle->runQuery($query);
     $output = '';
