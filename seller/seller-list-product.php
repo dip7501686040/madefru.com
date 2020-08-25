@@ -168,13 +168,7 @@ $(document).ready(function(){
                         <label class="mr-5" for="">Upload product images</label>
                     </li>
                     <li class="mb-2">
-                        <input type="file" name="product_images[]" required>
-                    </li>
-                    <li class="mb-2">
-                        <input type="file" name="product_images[]" required>
-                    </li>
-                    <li class="mb-2">
-                        <input type="file" name="product_images[]" required>
+                        <input type="file" name="product_images[]" required multiple>
                     </li>
                     </div>
                 </ul>

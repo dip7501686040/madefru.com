@@ -98,7 +98,7 @@ header {
     text-align: center;
     padding-top: 2.5px;
     background-color: white;
-    color: rgb(49, 49, 48);
+    color: #05d70a;
     border: 2px groove rgb(189, 185, 185);
     border-left: none;
     border-radius: 0 7px 7px 0;
@@ -132,15 +132,16 @@ header {
     padding: 0 2px;
     height: 30px;
     width: auto;
-    background-color: #05d70a;
-    color: rgb(49, 49, 48);
+    background-color: white;
+    color: #05d70a;
     font-weight: 700;
     text-decoration: none;
+    border: none;
 }
 
 .login-signup .btn:hover {
-    background-color: rgb(152, 226, 185);
-    color: rgb(49, 49, 48);
+    background-color: rgb(248, 250, 249);
+    color: #079709;
 }
 
 #signup-box {
@@ -642,8 +643,13 @@ header {
     width: 45px;
     height: 30px;
     padding: 0;
-    background-color: #05d70a;
-    color: rgb(49, 49, 48);
+    background-color: white;
+    color: #05d70a;
+    border: none;
+}
+.cart a:hover{
+    background-color: white;
+    color: #0a860c;
 }
 
 .cart a .cart-icon {
@@ -793,10 +799,14 @@ td {
     width: 45px;
     height: 30px;
     padding: 0;
-    background-color: #05d70a;
-    color: rgb(49, 49, 48);
+    background-color: white;
+    color: #05d70a;
+    border: none;
 }
-
+.wishlist a:hover{
+    background-color: white;
+    color: #0a860c;
+}
 .wishlist a .wishlist-icon {
     float: left;
     font-size: 20px;
@@ -855,13 +865,13 @@ td {
     width: 45px;
     height: 30px;
     padding: 0;
-    background-color: #05d70a;
-    color: rgb(49, 49, 48);
+    background-color: white;
+    color: #05d70a;
+    border: none;
 }
-
 #sell-on-madefru a:hover {
-    background-color: rgb(43, 43, 43);
-    color: white;
+   background-color: white;
+    color: #0a860c;
 }
 
 
@@ -871,7 +881,7 @@ td {
 /* navbar */
 
 .desktop-nav {
-    background-color: #05d70a;
+    background-color: white;
     text-align: center;
     height: 30px;
 }
@@ -889,7 +899,7 @@ td {
 }
 
 .desktop-nav ul li a {
-    color: rgb(49, 49, 49);
+    color: #262626;
     display: block;
     font-size: 14px;
     padding: 5px 50px;
@@ -899,7 +909,7 @@ td {
 
 .desktop-nav ul li:hover>a {
     color: rgb(253, 250, 250);
-    background: #126d9b;
+    background: #05d70a;
 }
 
 .desktop-nav ul li ul {
@@ -925,7 +935,7 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
  */
 
 .desktop-nav span {
-    background-color: rgb(72, 97, 97);
+    background-color: white;
     padding: 0 10px;
     display: block;
     min-height: 300px;
@@ -952,7 +962,7 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
 
 .desktop-nav span a {
     text-decoration: none;
-    color: rgb(233, 240, 235) !important;
+    color: #262626 !important;
     padding: 0 !important;
 }
 
@@ -1200,9 +1210,6 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
     margin-bottom: 5px;
 }
 
-.feature-section .features-box p {
-    color: #9e9e9e;
-}
 
 
 /* //feature box */
@@ -1227,7 +1234,7 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
 .shop .heading span {
     background-color: white;
     width: 50%;
-    color: rgb(65, 64, 66);
+    color: #262626;
     padding: 2px 100px;
     font-size: 22px;
     font-weight: 700;
@@ -1239,7 +1246,7 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
 
 .shop .heading a {
     float: right;
-    color: rgb(154, 154, 155);
+    color: #262626;
     margin: 5px 50px 0 0;
     font-weight: 700;
 }
@@ -1273,7 +1280,10 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
 }
 
 .shop a {
-    color: #383838;
+    color: #262626;
+}
+.shop a:hover{
+    color: #616161;
 }
 
 #new-item .owl-nav .owl-prev,
@@ -1409,7 +1419,14 @@ nav a:hover{text-decoration: none; color: rgb(213, 231, 213);}
 
 #go-to-shop {
     margin-left: 600px;
-    color: rgb(218, 243, 243);
+    background-color: white;
+    color: #05d70a;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+}
+#go-to-shop:hover{
+    color: rgb(30, 153, 30);
 }
 
 #client-shop {

@@ -42,7 +42,6 @@
                     <img src="images/download.png" alt="">
                 </div>
                 <h1>Fastest Delivery</h1>
-                <p>Fast delivery on all orders</p>
             </div>
 
             <div class="features-box">
@@ -50,7 +49,6 @@
                     <img src="images/payment.png" alt="">
                 </div>
                 <h1>Secure Payment</h1>
-                <p>Fast delivery on all orders</p>
             </div>
 
             <div class="features-box">
@@ -58,7 +56,6 @@
                     <img src="images/support.jpg" alt="">
                 </div>
                 <h1>24*7 Support</h1>
-                <p>free shipping on all orders</p>
             </div>
 
             <div class="features-box">
@@ -66,7 +63,6 @@
                     <img src="images/india.jpg" alt="">
                 </div>
                 <h1>Made in Inadia</h1>
-                <p>free shipping on all orders</p>
             </div>
 
         </div>

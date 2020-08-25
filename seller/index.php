@@ -43,10 +43,12 @@ if (isset($_SESSION['seller_id'])) {
         $(document).ready(function() {
             if (window.matchMedia('(min-width:320px) and (max-width: 480px)').matches) {
                 $("#open-shop").css("top", "80px");
+                $(".feature-section1").css("top", "80px");
                 $("#seller-content").css("top", "80px");
                 $(".index-footer").css("top", "130px");
             } else {
                 $("#open-shop").css("top", "80px");
+                $(".feature-section1").css("top", "80px");
                 $("#seller-content").css("top", "80px");
                 $(".index-footer").css("top", "130px");
             }
@@ -125,7 +127,6 @@ if (isset($_SESSION['seller_id'])) {
                     <img src="../images/download.png" alt="">
                 </div>
                 <h1>Ship Your Order Easily</h1>
-                <p>Fast delivery on all orders</p>
             </div>
 
             <div class="features-box">
@@ -133,7 +134,6 @@ if (isset($_SESSION['seller_id'])) {
                     <img src="../images/payment.png" alt="">
                 </div>
                 <h1> Fast & Secure Payment</h1>
-                <p>Fast delivery on all orders</p>
             </div>
 
             <div class="features-box">
@@ -141,7 +141,6 @@ if (isset($_SESSION['seller_id'])) {
                     <img src="../images/support.jpg" alt="">
                 </div>
                 <h1>24*7 Support</h1>
-                <p>free shipping on all orders</p>
             </div>
 
             <div class="features-box">
@@ -149,7 +148,6 @@ if (isset($_SESSION['seller_id'])) {
                     <img src="../images/india.jpg" alt="">
                 </div>
                 <h1>Made in Inadia</h1>
-                <p>free shipping on all orders</p>
             </div>
 
         </div>
