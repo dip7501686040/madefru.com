@@ -11,25 +11,25 @@
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
 						<div class="footer_box">
-							<h2>Needed Link</h2>
+							<h2>Information</h2>
 							<hr>
 							<ul>
-								<li><a href="delivery-policy.php">Delivey Policy</a></li>
-								<li><a href="privacy-policy.php">Privacy Policy</a></li>
-								<li><a href="return-policy.php">Return Policy</a></li>
-								<li><a href="terms-condition.php">Terms & Condition</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about-us.php">About Us</a></li>
+								<li><a href="contact_us.php">Contact us</a></li>
+								<li><a href="faqs.php">FAQ's</a></li>
+								<li><a href="seller/index.php">Join us as a Artist</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
 						<div class="footer_box">
-							<h2>Information</h2>
+							<h2>Needed Link</h2>
 							<hr>
 							<ul>
-								<li><a href="about-us.php">About Us</a></li>
-								<li><a href="store-info.php">Store Info</a></li>
-								<li><a href="faqs.php">FAQ's</a></li>
-								<li><a href="seller/index.php">Join us as a Artist</a></li>
+								<li><a href="delivery-policy.php">Delivery & Return Policy</a></li>
+								<li><a href="privacy-policy.php">Privacy Policy</a></li>
+								<li><a href="terms-condition.php">Terms & Condition</a></li>
 							</ul>
 						</div>
 					</div>

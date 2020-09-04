@@ -57,7 +57,7 @@ if(isset($_POST['add-to-cart'])){
     <link rel="shortcut icon" href="images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.18" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.19" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -219,6 +219,12 @@ $('nav').slideAndSwipe();
                 </div>
             </div>
         <!-- //search -->
+        <!-- about us -->
+            <div class="col header_about_us">
+                <a href="about-us.php" class="btn btn-dark">AboutUs</a>
+            </div>
+        <!-- //about us -->
+
         <!-- login-signup -->
             <div class="col">
                 <div class="login-signup">

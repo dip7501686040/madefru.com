@@ -481,7 +481,7 @@ select {
 
 /* why sell */
 
-.why-sell-section {
+.what-is-section {
     display: flex;
     font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
@@ -490,27 +490,28 @@ select {
     padding: 0;
 }
 
-.why-sell-section img {
+.what-is-section img {
     width: 40%;
     height: 400px;
-    margin: 80px 20px 0 20px;
+    margin: 120px 0 0 20px;
 }
 
-.why-sell-section .inner-container {
-    width: 55%;
+.what-is-section .inner-container {
+    width: 60%;
     float: right;
     background-color: #fdfdfd;
     padding: 50px 50px 0 50px;
 }
 
-.why-sell-section .inner-container h1 {
+.what-is-section .inner-container h1 {
     margin-bottom: 30px;
+    margin-left: -80px;
     font-size: 30px;
     font-weight: 900;
     color: #5fb709;
 }
 
-.why-sell-section .text {
+.what-is-section .text {
     font-size: 20px;
     color: #262626;
     line-height: 30px;
@@ -518,7 +519,27 @@ select {
     margin-bottom: 40px;
 }
 
-
+.who-can-why-sell-section{
+    width: 100%;
+    padding: 10px 40px;
+}
+.who-can-why-sell-section p{
+    font-size: 20px;
+    color: #262626;
+    line-height: 30px;
+    text-align: justify;
+}
+.who-can-why-sell-section h3 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #5fb709;
+}
+.why-sell-section{
+    padding-left: 50px !important;
+}
+.why-sell-section{
+    text-align: center;
+}
 /* //why sell */
 
 
@@ -569,8 +590,25 @@ select {
     text-align: center;
     color: #5fb709;
 }
-
-
+.how-sell-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.how-sell-content .steps{
+    text-align: left;
+    font-size: 18px;
+    color: #262626;
+    line-height: 30px;
+    text-align: justify;
+}
+.how-sell-content .benifits{
+    font-weight: bold;
+}
+.how-sell-content .conclusion{
+    padding: 0 50px;
+}
 /* //how to sell */
 
 
@@ -815,16 +853,16 @@ select {
     }
     /* //open shop */
     /* why sell */
-    .why-sell-section {
+    .what-is-section {
         display: block;
     }
-    .why-sell-section img {
+    .what-is-section img {
         display: block;
         margin: 5px;
         width: 97%;
         height: 200px;
     }
-    .why-sell-section .inner-container {
+    .what-is-section .inner-container {
         display: block;
         width: 92%;
         padding: 0;

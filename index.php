@@ -62,7 +62,7 @@
                 <div class="icon">
                     <img src="images/india.jpg" alt="">
                 </div>
-                <h1>Made in Inadia</h1>
+                <h1>Made in India</h1>
             </div>
 
         </div>

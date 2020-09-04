@@ -74,9 +74,6 @@ if (isset($_SESSION['seller_id'])) {
                     <img class="d-block w-100" src="../images/Seller3.jpg" alt="Third slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../images/Seller4.png" alt="Third slide">
-                </div>
-                <div class="carousel-item">
                     <img class="d-block w-100" src="../images/seller6.jpg" alt="Third slide">
                 </div>
                 <div class="carousel-item">
@@ -147,7 +144,7 @@ if (isset($_SESSION['seller_id'])) {
                 <div class="icon">
                     <img src="../images/india.jpg" alt="">
                 </div>
-                <h1>Made in Inadia</h1>
+                <h1>Made in India</h1>
             </div>
 
         </div>
@@ -157,31 +154,32 @@ if (isset($_SESSION['seller_id'])) {
 </div>
 <!-- //feature box -->
 <div id="seller-content">
-    <div class="why-sell-section">
+    <div class="what-is-section">
         <img src="../images/pic.jpg" alt="">
         <div class="inner-container">
-            <h1>Why Sell On Madefru</h1>
+            <h1>What is Madefru</h1>
             <p class="text">
-                Madefru is a online buyer and seller community,it focuses on
-                hand-crafted products. If you are a artist or artisan or simply a
-                handmade product maker then you can sell your item here instead of
-                building a website and all other expenses. Madefru is a fully free
-                alternative. we are an ecosystem between the creator and customer.
-                Before internet artist sell their product in person at fair or open
-                market and many of them still do business that way but Madefru give
-                them an opportunity to sell their products beyond their local area and
-                to a huge customer base without the hassle of setting up their own
-                website or e-commerce platform. Every creator can set up a online shop
-                on MF with fully e-commerce capabilities. It is fully free,fast,easy
-                and of course made for you.
+                Madefru is an online social-commerce platform for buying and selling handicrafts and also you can share photos/videos of your work with everyone and if you want then teach anyone from here via online. We want to create a link between Creator and Customer so that the price of the product is reduced and the originality of the product is maintained. And Creator will get the right price for the thing he/she has made which is not available in the market due to the middle man and the customer will know the name of the creator, so there is a possibility that the creator's name will be known all over the world. This community unlike other online sites is not only limited to the customers who are checking out the products but also a great opportunity for artisans to demonstrate their skills and display their artwork to earn a living. This concept of showcasing the talent of the artisans is what makes it more special.
             </p>
+        </div>
+    </div>
+    <div class="row who-can-why-sell-section">
+        <div class="col-sm-5 who-can-section">
+            <h3>Who can sell handicrafts on Madefru?</h3>
+            <p>
+                Madefru gives the hardworking artisans a leeway to showcase and sell something utterly useful. Any handmade item creator who creates a thing with great care and wants to share that product with everyone he/she can sell their product here. We should promote our handicrafts and buy them within us to help our economy to grow as a whole. This encourages individuality and creativity at its peak.
+            </p>
+        </div>
+        <div class="col-sm-7 why-sell-section">
+            <h3>Why sell on Madefru?</h3>
+            <p>This is a platform that provides a noble prospect of selling products beyond the local area thus creating a huge customer base. Every creator can become a seller of their own hand made goods setting up their own online shop in Madefru with e-commerce facilities. You can see the work of more artists like you from where you can learn many new things. It is not at all difficult to upload items on this site and there is also no fear of being tech-savvy. It is a fully free service. We would like to request all the creators to come here and add their own products to benefit the customers so that the customer can buy a product directly from you, this will eliminate the chance of the product being duplicated. </p>
         </div>
     </div>
     <div id="how-to-sell">
         <div class="feature-section">
             <div class="containr">
                 <div class="head pb-4">
-                    <h1>HOW TO SELL ON MADEFRU</h1>
+                    <h3>HOW TO SELL ON MADEFRU</h3>
                 </div>
                 <div class="features-inner">
 
@@ -215,6 +213,34 @@ if (isset($_SESSION['seller_id'])) {
                 </div>
             </div>
 
+        </div>
+        <div class="how-sell-content">
+            <h5>All you need to do is follow some simple steps.</h5>
+            <ol class="steps">
+                <li>
+                    Register with us and create an account that is even easier than creating any social media account. This will help us to promote your products in no time after you upload your goods.
+                </li>
+                <li>
+                    List your goods and give details such as size, shape, price, and other information that you want to include alongside your product.
+                </li>
+                <li>
+                    Relax and the rest of the job is ours to sell your products.
+                </li>
+            </ol>
+            <h5>Benefits</h5>
+            <p class="benifits">
+                • Easy to register as a seller&nbsp&nbsp
+                • Availability of 24x7 support&nbsp&nbsp
+                • Safe product delivery&nbsp&nbsp
+                • Secure payment policies
+            </p>
+            <p class="conclusion">
+                This is as easy as it looks so do not get all tensed up and trust us. We will become the bridge between your customer and you. Feel free to contact Madefru for further updates on starting your online handicraft shop for uploading your handcrafted goods. For all details and information call us on ________ any time as and when you may need us.
+            </p>
+            <h5>Corona Virus Update</h5>
+            <p class="conclusion">
+                Staff at Madefru is working under complete safety guidelines to prevent the spread of the coronavirus (COVID-19). Each and every employee arriving at your doorstep maintains a high standard of personal hygiene along with ensuring the use of face masks and sanitizers. Utmost care is taken to deliver the product to you free from germs. Your safety is our priority. We request you too to use face masks and sanitizers.
+            </p>
         </div>
     </div>
 </div>
