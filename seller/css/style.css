@@ -49,11 +49,19 @@ header {
     width: 90px;
     margin: 5px 0 5px 80px;
 }
-
+.home_btn{
+    background-color: indigo !important;
+    color: white !important;
+    float: right;
+    margin: 7px 130px 0 0;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
 #sellerlogin {
     display: inline-block;
     float: right;
-    margin: 7px 140px 0 0;
+    margin: 7px 10px 0 0;
     font-weight: 600;
     background-color: indigo;
     border: none;
@@ -714,17 +722,24 @@ select {
     #logo img {
         height: 35px;
         width: 52px;
-        margin: 10px;
+        margin: 10px 0 10px 10px;
     }
     header .container-fluid {
         padding: 0;
     }
     #sellerlogin {
         position: relative;
-        left: 80px;
-        font-size: 10px;
-        font-weight: 400;
-        margin: 13px 110px 0 0;
+        left: 0;
+        font-size: 10px !important;
+        font-weight: 400 !important;
+        margin: 13px auto 0 auto;
+    }
+    .home_btn{
+        position: relative;
+        left: 0;
+        font-size: 10px !important;
+        font-weight: 400 !important;
+        margin: 13px 10px 0 10px;
     }
     #sellerlogin-modal {
         height: auto;
@@ -868,13 +883,62 @@ select {
         padding: 0;
         margin-right: 16px;
     }
+    .what-is-section .inner-container h1 {
+        text-align: center;
+        margin: 0.5rem auto 1rem auto;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .what-is-section .inner-container p {
+        padding: 0 0.4rem;
+    }
+    .who-can-why-sell-section{
+        padding: 0;
+    }
+    .who-can-section{
+        padding: 0 !important;
+    }
+    .who-can-section h3{
+        text-align: center;
+        margin: -1rem auto 1rem 30px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .who-can-section p{
+        padding: 0 10px 0 35px;
+    }
+    .why-sell-section{
+        padding: 0 !important;
+    }
+    .why-sell-section h3{
+        text-align: center;
+        margin: 0rem auto 1rem auto;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .why-sell-section p{
+        padding: 0 10px 0 35px;
+    }
     /* //why sell */
     /* how to sell */
     #how-to-sell {
         top: 0;
     }
-    #how-to-sell .head h1 {
-        font-size: 22px;
+    #how-to-sell .head h3 {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    #how-to-sell .how-sell-content h5{
+        padding: 0 5px;
+    }
+    #how-to-sell .how-sell-content ol li{
+        margin-right: 20px;
+    }
+    #how-to-sell .how-sell-content .benifits{
+        padding: 0 10px;
+    }
+    #how-to-sell .how-sell-content .conclusion{
+        padding: 0 15px;
     }
     /* //how to sell */
     /* contact us */

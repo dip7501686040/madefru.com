@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../images/mf_logo6.png" type="image/x-icon">
     <link rel="icon" href="../images/mf_logo6.png" type="image/x-icon">
     <!-- css -->
-    <link href="css/style.css?version=1.13" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css?version=1.15" rel="stylesheet" type="text/css" media="all">
     <!--//css-->
     <!--bootstrap,jquery and proper.js-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -77,6 +77,7 @@
     <header>
         <div class="container-fluid">
             <a href="index.php" id="logo"><img src="../images/madefru sell logo2.jpg" alt=""></a>
+            <a href="../index.php" class="btn home_btn">Home</a>
             <?php
                 if(isset($_SESSION['seller_id'])){
                     ?>
