@@ -1,68 +1,64 @@
 <?php
-    include('header.php');
+include('header.php');
 ?>
-<head>
-    <style>
-    .about{
-    position: relative;
-    top: 50px;
-	width:100%;
-	height: 200px;
-	background-image:url(images/teracotta.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-.text{
-	font-size: 30px;
-	color:#fff;
-	font-family: sans-serif;
-	text-shadow: 0px 15px 12px #000;
-}
-.line{
-	width:300px;
-	height: 8px;
-	background-color: #5fb709;
-	display: block;
-	position: relative;
-	border-radius: 5px;
-	right:10%;
-	box-shadow: 0px 15px 12px 0px #000000;
-}
-.content{
-	width:100%;
-	height:auto;
-	padding: 70px;
-	font-size: 23px;
-	font-family: audiowide;
-	color:#333;
-	line-height: 30px;
-	text-align: center;
-}
-b{
-	font-size: 50px;
-	color:#000;
-	font-weight: 500px;
-}
-    </style>
-</head>
-<body>
-    <div class="container">
-		<div class="about">
-			<div class="text">
-				<h1>Privacy Policy</h1>
-				<div class="line"></div>
-			</div>
-		</div>
-		<div class="content">
-			<p><b>L</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic omnis maxime? Accusamus cum officiis odit labore asperiores inventore quidem et neque aliquam, quae minus illum ab. Voluptates, nihil illum!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, repudiandae totam, perspiciatis doloribus harum fugit neque natus iste dolorum rem error est veritatis numquam reprehenderit tempore inventore at voluptatum aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, vel. Atque ad magni veniam consequuntur? Doloremque delectus, laborum, quia possimus totam beatae aspernatur sed, adipisci impedit eius deleniti odio iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repellat ut facere ullam quae, laborum cumque, blanditiis saepe porro ducimus esse? Culpa beatae debitis eligendi tempore cupiditate quia accusantium asperiores?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem aut iste autem accusantium at saepe sint, veniam itaque magnam quos incidunt qui repellat, nihil quas reprehenderit explicabo, tempora ipsa minima.</p>
+
+<div class="container-fuid content_container">
+	<div class="about">
+		<div class="text">
+			<h1>Privacy Policy</h1>
+			<div class="line"></div>
 		</div>
 	</div>
+	<div class="content">
+		<div class="content_header">
+			<h4>Indian handicrafts online shopping store in India</h4>
+			<h4>Madefru- Made For You</h4>
+		</div>
+		<span class="green_text">Privacy Policy Of Madefru.com</span>
+		<p>Please review our Privacy Notice carefully as it also governs your visit to Madefru.com. This will help you to understand our practices.</p>
+		<p>The personal information or data provided by you to us during the time or registration and usage of Madefru.com will strictly be treated as confidential. This will be done in accordance with the Privacy Notice and applicable laws, rules, and regulations. In case if you are not fine with the information being transferred or used, we request you not to use the Madefru website.</p>
+		<p>As a customer, you understand, agree, and acknowledge that the Madefru website is an online platform. And it only grants you to purchase products listed on the website at the said price therein at any time from any location. Accordingly, the contract of sale of handicraft products on the website shall be a strictly bipartite contract between the sellers and the purchaser (you) on Madefru. We are not responsible for anything between you two.</p>
+		<p>We will make our best to ensure that you can easily access the website without any kind of interruption. In case due to bad weather and the Internet problem, this cannot be guaranteed. Your access to the website may also be restricted or suspended without informing you if any kind of repairs and maintenance work is in progress.</p>
+		<p>You must not use the website for any kind of illegal purpose. You are neither authorized nor have the permission to use Mdefru website in any way that causes any kind of minor or major harm to the website. You also understand that you, and not Madefru.com, are responsible for all electronic communications and content sent from your computer or any kind of electronic gadgets to us.</p>
+		<ul>
+			<li><p>You must use the website for lawful purposes only.</p></li>
+			<li><p>You must not use the website for fraudulent purposes, or criminal offense or other unlawful activity, to send, use or reuse any kind of electronic, handicraft and other kind of material that does not belong to you.</p></li>
+			<li><p>You must not use the website for offensive purpose (which promotes hatred,  racism, bigotry, or physical harm), or circulating deceptive message, including but not limited to material that is sexually explicit content or misleading, abusive, blasphemous, defamatory, libellous, indecent, pedophilic or menacing; harassing, obscene, pornographic,  ethnically objectionable, or impersonates another person; or threatens the unity, integrity, security or sovereignty of India or friendly relations with foreign States; disparaging or in breach of copyright, trademark, confidentiality, privacy or any other proprietary information or right; or is otherwise injurious to third parties; or relates to or promotes money laundering or gambling; or is harmful to minors in any way; or objectionable or otherwise unlawful in any manner whatsoever; or which consists of or contains software viruses, political campaigning, commercial solicitation, chain letters, mass mailings or any "spam” to cause annoyance, inconvenience or needless anxiety, etc.</p></li>
+			<li><p>Madefru is a hub and the right online store for all the Handicrafts, Figurines, Wall Arts, Clocks, Key Hooks, Wall Shelves and much more. We believe and make all our hard efforts to make the Indian handicrafts gain a good reputation in the business industry as well as in the eyes of the customers. We help the buyers and offer them a platform to shop for namazing handicraft products to decorate their kitchen, dining or living space, bathroom, and office area as per their choice.</p></li>
+			<li><p>You are granted a limited, revocable, and non-exclusive right to create a hyperlink to the Welcome page of Madefru.com as long as the link does not portray Madefru Seller Services Private Limited, Madefru.com, their affiliates, or their products or services in a false, misleading, derogatory, or otherwise offensive matter.</p></li>
+			<li><p>Subject to your compliance with these terms and conditions of use and payment of applicable fees, if any, Madefru Seller grants you a limited licence to access and make personal use of this website, but not to download (other than page caching) or modify it, or any portion of it, except with express written consent of Madefru Seller Services Private Limited and  if so or its affiliates, as may be applicable. This licence does not have or it is not included any kind of resale or commercial use of this website or its contents; any collection and use of any product listings, descriptions, or prices; </p></li>
+			<li><p>any derivative use of the Madefru website or its contents; any downloading or copying of account information for the benefit of another seller; or any use of data mining, robots, or similar data gathering and extraction tools.</p></li>
+			<li><p>The website of Madefru or any portion of this website which includes but is not limited to any copyrighted trademarks, other proprietary information or material,) and it may not be reproduced, sold, duplicated, resold, copied, visited, distributed or exploited/misuse in any case for any personal or commercial purpose without getting the permission from the owners of the website/company express written consent of Madefru Seller Services Private Limited and  if so or its affiliates, as may be applicable.</p></li>
+			<li><p>You are not authorised and neither you are permitted to frame or take or use framing techniques to which is highly enclose any trademark, logo, or information of other proprietary (including images, text, page layout, or form) of Madefru.com and its affiliates without express written consent.</p></li>
+			<li><p>The users of this website can submit comments, suggestions, ideas, questions, or other information, as long as the content is not illegal. In case if the content is obscene, defamatory, abusive, threatening, invasive of privacy, infringing of intellectual property rights, or otherwise injurious to third parties, or objectionable and does not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of "spam."</p></li>
+			<li><p>In particular, you may not utilise any data mining, robots, or similar data gathering and extraction tools to extract (whether once or many times) for re-utilisation of any substantial parts of this website, without Madefru Seller Services Private Limited and / or its affiliates (as may be applicable) express written consent.</p></li>
+			<li><p>You are not permitted to use any meta tags or any other hidden text utilising Madefru Seller Services Private Limited's or its affiliates' names or trademarks without the express written consent of Madefru Seller Services Private Limited and / or its affiliates, as applicable.</p></li>
+			<li><p>Any unauthorised or wrong use terminates the permission or license granted by Madefru Seller Services Private Limited and / or its affiliates, as applicable.</p></li>
+			<li><p>You may not use any Madefru.com logo or other proprietary graphic or trademark as part of the link without express written consent of Madefru Seller Services Private Limited and  if so or its affiliates, as may be applicable.</p></li>
+			<li><p>All the users whether they are customers or just visitors of this website (Madefru )may post their reviews, comments and other content. They can also send communications.</p></li>
+			<li><p>In the event a user uses a false e-mail address, impersonates any person or entity, or otherwise misleads as to the origin of any content. Madefru.com reserves the right (but not the obligation) to remove, refuse, delete or edit any content that in the sole judgement of Madefru.com violates these Conditions of use and, or terminate your permission to access or use this website.</p></li>
+			<li><p>If you do post content or submit material, and unless we indicate otherwise, you are bound for severe punishment and</p></li>
+			<li><p>grant Madefru Seller Services Private Limited and its affiliates a non-exclusive, royalty-free, irrevocable, perpetual and fully sublicensable rights to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media; and</p></li>
+			<li><p>Madefru Seller Services Private Limited and its affiliates and sublicensees the right to use the name that you submit in connection with such content, if they choose.</p></li>
+			<li><p>You also agree that you have read all the terms, conditions, privacy policy, exchange and return policy, delivery policy, etc and other kind of legal documents  that the rights you grant above are irrevocable during the entire period of protection of your intellectual property rights associated with such content and material.</p></li>
+			<li><p>You may not extract or re-utilise parts of the contents systematically of the website without Madefru Seller Services Private Limited and / or its affiliates (as may be applicable) express written consent.</p></li>
+			<li><p>You agree to waive your right to be identified as the author of such content and your right to object to derogatory treatment of such content. You agree to perform all further acts necessary to perfect any of the above rights granted by you to Madefru Seller Services Private Limited, including the execution of deeds and documents, at its request.</p></li>
+			<li><p>You are bound and represent or warrant that you own or otherwise control all of the rights to the content that you post or that you otherwise provide on or through the website; that, as at the date that the content or material is submitted to Madefru.com:</p></li>
+			<li><p>the content and material is correct or accurate in all the forms</p></li>
+			<li><p>the content is lawful. You agree to indemnify Madefru Seller Services Private Limited and its affiliates for all claims brought by a third party against it or its affiliates arising out of or in connection with a breach of any of these warranties.</p></li>
+			<li><p>use of the content and material you supply does not breach any applicable Madefru.com policies or guidelines and will not cause injury to any person or entity (including that the content or material is not defamatory)</p></li>
+			<li><p>Because Madefru.com lists hundreds of handicraft products for sale which are professionally offered by sellers on the website and hosts many thousands of comments, it is not possible for us to be aware of the contents of each product listed for sale. Neither each comment or review that is displayed. Therefore or so, Madefru.com operates or functions on a notice and takedown basis.</p></li>
+			<li><p>If you believe that any content on the website is illegal, offensive (including but not limited to material that is sexually explicit content or which promotes racism, harassing, blasphemous, pedophilic or menacing; ethnically objectionable, disparaging; or is otherwise injurious to third parties; bigotry, hatred or physical harm), deceptive, misleading, abusive, indecent, defamatory, libelous, obscene, pornographic, or relates to or promotes money laundering or gambling; or is harmful to minors in any way; or impersonates another person; or threatens the unity, integrity, security or sovereignty of India or friendly relations with foreign States; or objectionable or otherwise unlawful in any manner whatsoever; or which consists of or contains software viruses, (" Objectionable Content "), please notify us immediately by following our Notice and Procedure for Making Claims of Right Infringements. Once this procedure has been followed, Madefru.com will make all reasonable endeavours to remove such Objectionable Content complained about within a reasonable time.</p></li>
+			<li><p>All content included on the website, like text, images, audio clips, digital downloads, graphics, data compilations, and logos, button icons,  and software, is the property of Madefru Seller Services Private Limited, its affiliates or its content suppliers and is protected by India and international copyright, authors' rights and database right laws.</p></li>
+			<li><p>The compilation of all content on this website is the exclusive property of Madefru Seller Services Private Limited and its affiliates and is protected by laws of India and international copyright and database right laws.</p></li>
+			<li><p>All software used on this website is the property of Madefru Seller Services Private Limited, its affiliates or its software suppliers and is protected by India and international copyright and author' rights laws.</p></li>
+			<li><p>You may also not create and/ or publish your own database that features substantial (eg: prices and product listings) parts of this website without Madefru Seller Services Private Limited and / or its affiliates (as may be applicable) express written consent.</p></li>
+		</ul>
+		<span class="green_text">*Terms and conditions, privacy policy, return policy, exchange policy, delivery policy more are applicable.</span>
+	</div>
+</div>
 <div>
-<?php
-    include('footer.php');
-?>
+	<?php
+	include('footer.php');
+	?>
 </div>

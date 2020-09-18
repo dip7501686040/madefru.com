@@ -71,14 +71,27 @@
 
 </div>
 <!-- //feature box -->
-
 <!-- categories -->
 <?php
 include('categories.php');
 include('nxtcategories.php');
 ?>
 <!-- //categories -->
+<!-- price tag -->
 
+<div class="container2">
+    <ul>
+        <li>
+            <div class="bottom">Rs.299 STORE</div>
+        </li>
+        <li>
+            <div class="bottom">Rs.599 STORE</div>
+        </li>
+        <li>
+            <div class="bottom">Rs.999 STORE</div>
+        </li>
+    </ul>
+</div>
 <!-- shop -->
 <!-- new items -->
 <div class="shop">
